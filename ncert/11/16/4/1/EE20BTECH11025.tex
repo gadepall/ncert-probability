@@ -1,0 +1,222 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{romannum}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+
+
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+
+\title{Assignment 1}
+\author{Jaswanth Chowdary Madala}
+
+
+
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+\begin{enumerate}
+\item A box contains 10 red marbles, 20 blue marbles and 30 green marbles. 5 marbles
+are drawn from the box, what is the probability that
+\begin{enumerate}
+\item all will be blue?
+\item atleast one will be green?
+\end{enumerate}
+\textbf{Solution:}\\
+
+\textbf{Lemma-1:}
+The probability of the event where $n$ marbles drawn such that there are - $r$ red, $b$ blue, $g$ green marbles from the box which contains total of $N$ marbles - $R$ red, $B$ blue, $G$ green is $\frac{^{R}C_{r} \, ^{B}C_{b} \, ^{G}C_{g}}{^{N}C_{n}}$\\
+\textbf{Proof:} \\
+Total ways of choosing $r$ red balls - $^{R}C_{r}$\\
+Total ways of choosing $b$ blue balls - $^{B}C_{b}$\\
+Total ways of choosing $g$ green balls - $^{G}C_{g}$\\
+The total number of ways of choosing $n$ marbles such that there are $r$ red, $b$ blue, $g$ green is $^{R}C_{r} \, ^{B}C_{b} \, ^{G}C_{g}$\\
+The total number of ways of choosing $n$ marbles out of $N$ marbles is $^{N}C_{n}$\\
+Hence the required probability is given by,
+\begin{align}
+&= \frac{^{P}C_{p} \times ^{Q}C_{q} \times ^{R}C_{r}}{^{N}C_{n}}
+\label{eq:ncert/11/16/4/1/1}
+\end{align}
+\\
+\textbf{Lemma-2:} 
+\begin{align}
+{^{R}C_{0}} \, {^{B}C_{n}} + {^{R}C_{1}} \, {^{B}C_{n-1}} + \cdots + {^{R}C_{n}} \, {^{B}C_{0}} = {^{R+B}C_{n}} \label{eq:ncert/11/16/4/1/2}
+\end{align}
+\textbf{Proof:} \\
+We solve this by relating the LHS of the equation \eqref{eq:ncert/11/16/4/1/2} to some coefficient in a Binomial expansion. From Binomial theorem we have,
+\begin{align}
+\brak{a+b}^n = \sum_{k = 0}^{n} {^{n}C_{k}} \, a^r \, b^{n-r}
+\end{align}
+Consider the following Binomial expansions,
+\begin{align}
+\brak{x+1}^R = \sum_{k = 0}^{R} {^{R}C_{k}} \, x^k \label{eq:ncert/11/16/4/1/3}\\
+\brak{x+1}^B = \sum_{m = 0}^{B} {^{B}C_{m}} \, x^m \label{eq:ncert/11/16/4/1/4}
+\end{align}
+Now lets take the product of the eqations \eqref{eq:ncert/11/16/4/1/3}, \eqref{eq:ncert/11/16/4/1/4}
+\begin{align}
+\brak{x+1}^R \brak{x+1}^B = \sum_{k = 0}^{R} \sum_{m = 0}^{B} {^{R}C_{k}} {^{B}C_{m}}\, x^{k+m}\\
+\implies \brak{x+1}^{R+B} = \sum_{k = 0}^{R} \sum_{m = 0}^{B} {^{R}C_{k}} {^{B}C_{m}}\, x^{k+m} \label{eq:ncert/11/16/4/1/5}
+\end{align} 
+From the RHS of \eqref{eq:ncert/11/16/4/1/5}, the required expression, LHS of \eqref{eq:ncert/11/16/4/1/2} is the coefficient of $x^{n}$ in the above equation. The coefficient of $x^{n}$ in LHS of \eqref{eq:ncert/11/16/4/1/5} is ${^{R+B}C_{n}}$. 
+\begin{align}
+\implies {^{R}C_{0}} \, {^{B}C_{n}} + {^{R}C_{1}} \, {^{B}C_{n-1}} + \cdots + {^{R}C_{n}} \, {^{B}C_{0}} = {^{R+B}C_{n}} 
+\end{align}
+
+
+In this question, total marbles in the box are 60 - 10 red, 20 blue, 30 green. Out of which 5 balls are drawn. Hence we have,
+\begin{align}
+N = 60, \, R = 10, \,B = 20,  \, G = 30, \,n = 5
+\end{align}
+\begin{enumerate}
+\item The probability that all drawn marbles are blue implies
+\begin{align}
+r = 0,\,  b = 5, \, G = 0
+\end{align}
+From \eqref{eq:ncert/11/16/4/1/1} we get the probability as,
+\begin{align}
+&= \frac{^{20}C_{5}}{^{60}C_{5}}
+\end{align}
+\item The probability that the drawn marble contains atleast 1 green, It is complement to the event where no marble drawn is green, For this event
+\begin{align}
+g = 0
+\end{align}
+From \eqref{eq:ncert/11/16/4/1/1} its probability is given by,
+\begin{align}
+&= \frac{{^{10}C_{0}} \, {^{20}C_{5}} + {^{10}C_{1}} \, {^{20}C_{4}} + \cdots + {^{10}C_{5}} \, {^{20}C_{0}}}{^{60}C_{5}}
+\end{align}
+From \eqref{eq:ncert/11/16/4/1/2} we get this as,
+\begin{align}
+&= \frac{^{10+20}C_{5}}{^{60}C_{5}}\\
+&= \frac{^{30}C_{5}}{^{60}C_{5}}
+\end{align}
+Hence the required probability is given by,
+\begin{align}
+1 - \frac{^{30}C_{5}}{^{60}C_{5}}
+\end{align}
+\end{enumerate}
+\end{enumerate}
+\end{document}
