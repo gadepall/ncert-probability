@@ -1,5 +1,9 @@
 \begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
-\item  Boolean Axioms:
+	\item
+\begin{align}
+	A \cup B \triangleq A+B, A \cap B \triangleq AB.
+\end{align}
+	\item  Boolean Axioms:  For $A \in \cbrak{0,1}$,
 \begin{align}
 	A + A^{\prime} = 1
 	\\
@@ -8,16 +12,24 @@
 \item De Morgan's Law
 \begin{align}
 A^{\prime}B^{\prime} &=  \brak{A+B}^{\prime}
+	\label{eq:demorgan}
 \end{align}
 \item Axioms of Probability
 	\begin{enumerate}
 \item 
 \begin{align}
 	0 \le \pr{A} \le 1	
+	\label{eq:axiom-pos}
+\end{align}
+\item 
+\begin{align}
+	\pr{1} =1	
+	\label{eq:axiom-one}
 \end{align}
 \item If $AB = 0$,
 \begin{align}
 	\pr{A+B} = \pr{A} + \pr{B}.
+\label{eq:axiom_exclusive}
 \end{align}
 	\end{enumerate}
 \item If $A, B$ are independent,
@@ -28,30 +40,59 @@ A^{\prime}B^{\prime} &=  \brak{A+B}^{\prime}
 \begin{align}
 	\pr{A | B} = \frac{\pr{AB}}{\pr{B}}
 \end{align}
-\item Substituting \eqref{eq:axiom_sum_ABp} in \eqref{eq:axiom_sum_two}, 
+\item 
+	%Substituting \eqref{eq:axiom_sum_ABp} in \eqref{eq:axiom_sum_two}, 
 	\begin{align}
 \pr{A+B} &= \pr{A} + \pr{B} - \pr{AB} 
 \label{eq:axiom_sum_AB}
 \end{align}
-\item 
+		\begin{proof}
+\begin{align}
+	A &= A \brak{B+B^{\prime}} =  AB + AB^{\prime}
+\\
+	\implies \pr{A} &=  \pr{AB} + \pr{AB^{\prime}}
+	\because
+	\brak{ AB}\brak{  AB^{\prime}} = 0,
+\label{eq:axiom_sum_A}
+\end{align}
+from \eqref{eq:axiom_exclusive}.
+Similarly,
 \begin{align}
 A+B &= A\brak{B+B^{\prime}} + B
 \\
 &= B \brak{A +1} + A B^{\prime}
 \\
 &=B + A B^{\prime}
+\\
+	\implies \pr{A+B } 
+	&=\pr{B} + \pr{A B^{\prime}}\quad \because B  A B^{\prime} = 0
+\label{eq:axiom_sum_ApB}
 \end{align}
-\item 
+From 
+\eqref{eq:axiom_sum_A}
+and 
+\eqref{eq:axiom_sum_ApB},
+we obtain
+\eqref{eq:axiom_sum_AB}.
+		\end{proof}
+	\item 
+From \eqref{eq:axiom_sum_A}
+and 
+	\eqref{eq:axiom-pos},
 \begin{align}
-A = A \brak{B+B^{\prime}} =  AB + AB^{\prime}
-\label{eq:axiom_sum_A}
+	\label{eq:axiom-prod-ge}
+	\pr{A} \ge \pr{AB}
 \end{align}
+\end{enumerate}
+\iffalse
 and 
 \begin{align}
-\brak{ AB}\brak{  AB^{\prime}} = 0, \because BB^{\prime} = 0
+ \because BB^{\prime} = 0
 \label{eq:axiom_sum_AB0}
 \end{align}
 Hence, $AB$ and $AB^{\prime}$ are mutually exclusive. 
+\fi
+\iffalse
 \item 
 Let A, B and C be three events.
 
@@ -100,4 +141,4 @@ And,
 \pr{AB^{\prime}} =  \pr{A} - \pr{AB}
 \label{eq:axiom_sum_ABp}
 \end{align}
-\end{enumerate}
+\fi
