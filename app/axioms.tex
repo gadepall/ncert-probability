@@ -1,9 +1,16 @@
-\section{Definitions}
-\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item  Boolean Axioms:
+\begin{align}
+	A + A^{\prime} = 1
+	\\
+	A  A^{\prime} = 0
+\end{align}
+\item De Morgan's Law
+\begin{align}
+A^{\prime}B^{\prime} &=  \brak{A+B}^{\prime}
+\end{align}
+\item Axioms of Probability
+	\begin{enumerate}
 \item 
 \begin{align}
 	0 \le \pr{A} \le 1	
@@ -12,6 +19,7 @@
 \begin{align}
 	\pr{A+B} = \pr{A} + \pr{B}.
 \end{align}
+	\end{enumerate}
 \item If $A, B$ are independent,
 \begin{align}
 	\pr{AB} = \pr{A}\pr{B}
@@ -20,19 +28,10 @@
 \begin{align}
 	\pr{A | B} = \frac{\pr{AB}}{\pr{B}}
 \end{align}
-\end{enumerate}
-\section{Boolean Logic}
-\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
-\item 
-\begin{align}
-	A + A^{\prime} = 1
-\end{align}
-\item 
-\begin{align}
-A^{\prime}B^{\prime} &=  \brak{A+B}^{\prime}
+\item Substituting \eqref{eq:axiom_sum_ABp} in \eqref{eq:axiom_sum_two}, 
+	\begin{align}
+\pr{A+B} &= \pr{A} + \pr{B} - \pr{AB} 
+\label{eq:axiom_sum_AB}
 \end{align}
 \item 
 \begin{align}
@@ -53,7 +52,6 @@ and
 \label{eq:axiom_sum_AB0}
 \end{align}
 Hence, $AB$ and $AB^{\prime}$ are mutually exclusive. 
-\newpage 
 \item 
 Let A, B and C be three events.
 
@@ -74,13 +72,6 @@ And,
     X&=(AB^\prime C^\prime+A^\prime BC^\prime+A^\prime B^\prime C)
 	\label{eq:axiom_occurrence_of_exactly_one}
 \end{align}
-\end{enumerate}
-\newpage
-\section{Properties}
-\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
 \item 
 \begin{align}
 	\pr{A^{\prime}} = 1 - \pr{A}.
@@ -108,10 +99,5 @@ And,
 \implies 
 \pr{AB^{\prime}} =  \pr{A} - \pr{AB}
 \label{eq:axiom_sum_ABp}
-\end{align}
-\item Substituting \eqref{eq:axiom_sum_ABp} in \eqref{eq:axiom_sum_two}, 
-	\begin{align}
-\pr{A+B} &= \pr{A} + \pr{B} - \pr{AB} 
-\label{eq:axiom_sum_AB}
 \end{align}
 \end{enumerate}
