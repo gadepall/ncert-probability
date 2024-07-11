@@ -1,4 +1,10 @@
-\documentclass[journal,a5paper]{IEEEtran}
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm]{geometry}
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\setlength{\intextsep}{10pt} % Space between text and floats
+
 \usepackage{gvv-book}
 \usepackage{gvv}
 
@@ -31,8 +37,9 @@
 
 \section*{About this Book}
 
-This book attempts to introduce matrices through high school coordinate geometry. All problems in the book are from NCERT mathematics textbooks from Class 9-12.   
-The content is sufficient for industry jobs.
+This book introduces random variables through high school probability. All problems in the book are from NCERT mathematics textbooks from Class 9-12.   
+  A lot of college level concepts related to random variables are covered in the process.
+The content is sufficient for random variable simulations using Python/C.
 There is no copyright, so readers are free to print and share.  
 \begin{flushright}
 \today
@@ -50,7 +57,7 @@ https://www.gnu.org/licenses/fdl-1.3.en.html
 \tableofcontents
 
 \newpage
-\twocolumn
+%\twocolumn
 
 
 %\renewcommand{\theequation}{\theenumi}
@@ -64,7 +71,9 @@ https://www.gnu.org/licenses/fdl-1.3.en.html
 \subsection{Formulae}
 \input{app/axioms.tex}
 \subsection{Examples}
-\input{ncert/axioms.tex}
+\input{ncert/axioms/axioms.tex}
+\subsection{Word Problems}
+\input{ncert/axioms/word.tex}
 \subsection{Conditional Probability}
 \input{exemplar/axioms.tex}
 \section{Random Variables}
