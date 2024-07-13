@@ -32,15 +32,6 @@ A^{\prime}B^{\prime} &=  \brak{A+B}^{\prime}
 \label{eq:axiom_exclusive}
 \end{align}
 	\end{enumerate}
-\item If $A, B$ are independent,
-\begin{align}
-	\pr{AB} = \pr{A}\pr{B}
-\label{eq:axiom-ind}
-\end{align}
-\item 
-\begin{align}
-	\pr{A | B} = \frac{\pr{AB}}{\pr{B}}
-\end{align}
 \item 
 	%Substituting \eqref{eq:axiom_sum_ABp} in \eqref{eq:axiom_sum_two}, 
 	\begin{align}
@@ -84,62 +75,19 @@ and
 	\label{eq:axiom-prod-ge}
 	\pr{A} \ge \pr{AB}
 \end{align}
+\item If $A, B$ are independent,
+\begin{align}
+	\pr{AB} = \pr{A}\pr{B}
+\label{eq:axiom-ind}
+\end{align}
+\item 
+\begin{align}
+	\pr{A | B} = \frac{\pr{AB}}{\pr{B}}
+\label{eq:axiom-cond}
+\end{align}
+\item 
+\begin{align}
+	\pr{A' | B} = \frac{\pr{A'B}}{\pr{B}} = \frac{\pr{B}-\pr{AB}}{\pr{B}}
+\label{eq:axiom-cond-prime}
+\end{align}
 \end{enumerate}
-\iffalse
-and 
-\begin{align}
- \because BB^{\prime} = 0
-\label{eq:axiom_sum_AB0}
-\end{align}
-Hence, $AB$ and $AB^{\prime}$ are mutually exclusive. 
-\fi
-\iffalse
-\item 
-Let A, B and C be three events.
-
-Let X be the event that exactly one of A, B and C occurs.
-
-Let Y be the event that at least one of A, B or C occur.
-
-Let Z be the event that at least two of A, B or C occur.
-\begin{align}
-	Y &=A+B+C
-\end{align}
-Similarly,
-\begin{align}
-	Z &=AB+BC+CA
-\end{align}
-And,
-\begin{align}
-    X&=(AB^\prime C^\prime+A^\prime BC^\prime+A^\prime B^\prime C)
-	\label{eq:axiom_occurrence_of_exactly_one}
-\end{align}
-\item 
-\begin{align}
-	\pr{A^{\prime}} = 1 - \pr{A}.
-\end{align}
-\item
-\begin{align}
-\pr{A^{\prime}B^{\prime}} &=  \pr{\brak{A+B}^{\prime}} 
-\\
-&= 1 - \pr{A+B} 
-\label{eq:axiom_sum_one}
-\end{align}
-\item 
-\begin{align}
-\pr{A+B} &= \pr{B + A B^{\prime} }
-\\
-&=\pr{B}+\pr{ A B^{\prime} } 
-\label{eq:axiom_sum_two}
-\\
-&\because B \brak{ A B^{\prime} } = 0
-\end{align}
-\item
-\begin{align}
-\pr{A} = \pr{AB} + \pr{AB^{\prime}}
-\\
-\implies 
-\pr{AB^{\prime}} =  \pr{A} - \pr{AB}
-\label{eq:axiom_sum_ABp}
-\end{align}
-\fi
