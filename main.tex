@@ -7,6 +7,7 @@
 
 \usepackage{gvv-book}
 \usepackage{gvv}
+\usepackage{multicol}
 
 \makeindex
 
@@ -70,15 +71,18 @@ https://www.gnu.org/licenses/fdl-1.3.en.html
 \section{Axioms}
 \subsection{Formulae}
 \input{app/axioms.tex}
+\subsection{Definitions}
+\input{axioms/defs.tex}
 \subsection{Boolean Logic}
 \input{axioms/axioms.tex}
-\subsection{Conditional Probability}
-\input{axioms/cond.tex}
-\section{Applications}
-\subsection{Axioms}
+\subsection{Applications}
 \input{word/axioms.tex}
 \subsection{Conditional Probability}
+\input{axioms/cond.tex}
+\subsection{Applications}
 \input{word/cond.tex}
+\subsection{Random Variables}
+\input{axioms/rand.tex}
 \iffalse
 \subsection{Applications}
 \input{exemplar/cond/word.tex}
