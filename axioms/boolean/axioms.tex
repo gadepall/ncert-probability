@@ -1,7 +1,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
 	\item Which of the following cannot be the probability of an event ? 
-
-		\begin{multicols}{4}
+	\vspace{-5mm}
+\begin{multicols}{4}
 \begin{enumerate}
 \item $\frac{2}{3}$ 
 \item $-1.5$ 
@@ -9,9 +9,10 @@
 \item $0.7$ 
 \end{enumerate}
 \end{multicols}
+	\vspace{-5mm}
 \solution
 \input{ncert/10/15/1/4/main.tex}
-\item If P(E) = 0.05, what is the probability of ‘not E’?\\
+\item If $P(E) = 0.05$, what is the probability of ‘not $E$’?\\
 \solution
 \input{ncert/10/5/1/5/axioms.tex}
 \item Check whether the following probabilities $\pr{A}$ and $\pr{B}$ are consistently defined
@@ -31,9 +32,24 @@
 \end{enumerate}
 \solution
 \input{ncert/11/16/3/15/main.tex}
-\item Events $E$ and $F$ are such that P(not E or not F) = 0.25, state whether $E$ and $F$ are mutually exclusive.\\
+\item Events $E$ and $F$ are such that P(not $E$ or not $F$) = 0.25, state whether $E$ and $F$ are mutually exclusive.\\
 \solution
 \input{ncert/11/16/3/16/main.tex}
+\item If A and B are two independent events with $\pr{A}=\frac{3}{5}$ and $\pr{B}=\frac{4}{9}$ then, $\pr{A^\prime B^\prime}$
+	\vspace{-5mm}
+\begin{multicols}{4}
+\begin{enumerate}
+%		 \setlength{\itemsep}{1ex} % Adjust the value as needed
+\item $\frac{4}{15}$ 
+\item $\frac{8}{45}$
+\item $\frac{1}{3}$
+\item $\frac{2}{9}$
+\end{enumerate}
+\end{multicols}
+	\vspace{-5mm}
+		\solution
+		\input{exemplar/12/13/3/69/main.tex} 
+%
 	\item $A$ and $B$ are events such that $\pr A=0.42, \pr B=0.48$ and $\pr {A \text{ and } B}=0.16$. \\
 Determine 
 \begin{enumerate}
@@ -43,25 +59,19 @@ Determine
 \end{enumerate}
 \solution
 \input{ncert/11/16/3/17/axioms.tex}
-\item If A and B are two independent events with $\pr{A}=\frac{3}{5}$ and $\pr{B}=\frac{4}{9}$ then, $\pr{A^\prime B^\prime}$
-\begin{enumerate}
-		 \setlength{\itemsep}{1ex} % Adjust the value as needed
-\item $\frac{4}{15}$ 
-\item $\frac{8}{45}$
-\item $\frac{1}{3}$
-\item $\frac{2}{9}$
-\end{enumerate}
-		\solution
-		\input{exemplar/12/13/3/69/main.tex} 
-%
 \item $A$ and $B$ are two events such that \pr A = 0.54, \pr B = 0.69 and \pr {AB} = 0.35.
 %
-Find \begin{enumerate}
+Find 
+	\vspace{-3mm}
+\begin{multicols}{4}
+	\begin{enumerate}
 \item \pr {A+B}
 \item \pr{A^\prime  B^\prime }
 \item \pr {A B^\prime}
 \item \pr {B A^\prime} 
 \end{enumerate} 
+\end{multicols}
+	\vspace{-3mm}
 		\solution
 \input{ncert/11/16/4/7/main.tex}
 \item If $\pr{A} = \frac{3}{5}$ and $\pr{B} = \frac{1}{5}$ find $\pr{A \cap B}$ if A and B are independent events.
@@ -132,6 +142,8 @@ If $\pr{A}>0$ and $\pr{B}>0$, then $A$ and $B$ can be mutually exclusive and ind
 \solution
 \input{exemplar/12/13/3/95/main.tex}
 \item If $A$ and $B$ are mutually exclusive events, $\pr{A}=0.35$ and $\pr{B}=0.45$ then find
+	\vspace{-5mm}
+\begin{multicols}{4}
 \begin{enumerate}
 \item $\pr{A'}$
 \item $\pr{B'}$
@@ -140,25 +152,38 @@ If $\pr{A}>0$ and $\pr{B}>0$, then $A$ and $B$ can be mutually exclusive and ind
 \item $\pr{AB'}$
 \item $\pr{A'B'}$
 \end{enumerate}
+\end{multicols}
 %
+	\vspace{-5mm}
 \solution 
 \input{exemplar/11/16/3/7/main.tex}
 %
 \item The accompanying Venn diagram shows three events, A, B, and C, and also the probabilities of the various intersections (for instance, $\pr{AB}=0.7$. Determine 
+\begin{multicols}{3}
 	\begin{enumerate}
 		\item \pr{A}
 		\item \pr{BC'}
 		\item \pr{A+B}
 		\item \pr{AB'}
 		\item \pr{BC}
-		\item \text{Probability that exactly one of the three occurs}
+		\item		\begin{minipage}[t]{\linewidth}
+			Probability that exactly one of the three occurs
+    \end{minipage}
 	\end{enumerate}
-	\begin{figure}[htb]
+\end{multicols}
+	\begin{figure}[H]
 		\centering
 		\input{exemplar/11/16/3/11/figs/fig.tex}
 		\caption {}
 		\label{fig:exemplar/11/16/3/11}
 	\end{figure}
+\begin{table}[H]
+\centering
+\scriptsize
+	\input{exemplar/11/16/3/11/tables/11.16.3.11.tex }
+\caption{}
+\label{tab:11/16/3/11}
+\end{table}
 		\solution
 		\input{exemplar/11/16/3/11/main.tex}
 \item The probability of happening of an event $A$ is 0.5 and that of $B$ is 0.3. If $A$ and $B$ are mutually exclusive events, then the probability of neither $A$ nor $B$ is \underline{\phantom{Blank}}.
@@ -166,24 +191,28 @@ If $\pr{A}>0$ and $\pr{B}>0$, then $A$ and $B$ can be mutually exclusive and ind
 \solution
 		\input{exemplar/11/16/3/41/main.tex}
 \item If $A$ and $B$ are mutually exclusive events,then
+\begin{multicols}{2}
 \begin{enumerate}
 \item $\pr{A} \leq\pr{B^\prime}$
 \item $\pr{A} \geq \pr{B^\prime}$
 \item $\pr{A} < \pr{B^\prime}$
 \item $\text{none of these}$
 \end{enumerate}
+\end{multicols}
 \solution 
 \input{exemplar/11/16/3/23/main.tex}
 \item The probability of an occurrence of event $A$ is .7 and that of the occurrence of event $B$ is .3 and the probability of occurrence of both is .4. Is this statement true or false?\\
 \solution
 \input{exemplar/11/16/3/35/main.tex}
 \item If \pr{A+B} = \pr{AB} for any two events $A$ and $B$ , then
+	\begin{multicols}{4}
 \begin{enumerate}
 \item $\pr{A}=\pr{B}$
 \item $\pr{A} > \pr{B}$
 \item $\pr{A} < \pr{B}$
 \item none of these
 \end{enumerate}
+\end{multicols}
 \solution
 \input{exemplar/11/16/3/24/main.tex}
 \item If $A$ and $B$ are such that 
@@ -197,25 +226,33 @@ then $\Pr(A') + \Pr(B')$ = \\
 \input{exemplar/12/13/3/65/main.tex}
 \item Given two independent events A and B such that $P(A) = 0.3$, $P(B) = 0.6$. Find
 		\label{ncert/12/13/2/10}
+		\vspace{-4mm}
+\begin{multicols}{2}
 \begin{enumerate}
 \item $P(A\text{ and } B)$
 \item $P(A \text{ and not } B)$
 \item $P(A \text{ or } B)$
 \item $P(\text{neither } A \text{ nor } B)$
 \end{enumerate}
-\item The probability distribution of a discrete random variable $X$ is given below. The value of $k$ is equal to:
-\begin{table}[htb]
-\centering
-\input{exemplar/12/13/3/87/tables/Book1.tex}
-\caption{}
-\label{tab:exemplar/12/13/3/87}
-\end{table}
+\end{multicols}
+		\vspace{-3mm}
+\item The probability distribution of a discrete random variable $X$ is given below
+in \tabref{tab:exemplar/12/13/3/87}.
+	The value of $k$ is equal to
+\begin{multicols}{4}
 \begin{enumerate}
 \item 8
 \item 16
 \item 32
 \item 48
 \end{enumerate}
+\end{multicols}
+\begin{table}[htb]
+\centering
+\input{exemplar/12/13/3/87/tables/Book1.tex}
+\caption{}
+\label{tab:exemplar/12/13/3/87}
+\end{table}
 \solution
 \input{exemplar/12/13/3/87/main.tex}
 \item State True or False for the given statement:
@@ -226,12 +263,16 @@ Two independent events are always mutually exclusive.\\
 \solution
 \input{exemplar/12/13/3/100/main.tex}
 \item Let $E_1$ and $E_2$ be two independent events such that $\pr{E_1} = p_1 $ and $ \pr{E_2} = p_2 $  Describe in words the events whose probabilities are
+		\vspace{-3mm}
+\begin{multicols}{2}
 \begin{enumerate}
 \item \ $p_1 p_2$
 \quad\item \ $(1 - p_1) p_2 $
 \quad\item \ $1 - (1 - p_1)(1 - p_2)$
 \quad\item \ $p_1 + p_2 - 2p_1 p_2$
 \end{enumerate}
+\end{multicols}
+		\vspace{-3mm}
 \solution
 \input{exemplar/12/13/3/9/main.tex}
 \end{enumerate}
