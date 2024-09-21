@@ -123,11 +123,10 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	261pt+%
-	170pt+%
-	67pt+%
+	250pt+%
+	150pt+%
 0pt}
-\def\gumericNumCols{3}
+\def\gumericNumCols{2}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
          \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
 \ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
@@ -145,84 +144,69 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{261pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{190pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{67pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{250pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
-	b{\gnumericColC}%
 	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  The tabular options. (Caption, headers... see Goosens, p.124) %%
+%%  The longtable options. (Caption, headers... see Goosens, p.124) %%
 %	\caption{The Table Caption.}             \\	%
 % \hline	% Across the top of the table.
 %%  The rest of these options are table rows which are placed on    %%
 %%  the first, last or every page. Use \multicolumn if you want.    %%
 
 %%  Header for the first page.                                      %%
-%	\multicolumn{3}{c}{The First Header} \\ \hline 
+%	\multicolumn{2}{c}{The First Header} \\ \hline 
 %	\multicolumn{1}{c}{colTag}	%Column 1
-%	&\multicolumn{1}{c}{colTag}	%Column 2
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endfirsthead
 
 %%  The running header definition.                                  %%
 %	\hline
-%	\multicolumn{3}{l}{\ldots\small\slshape continued} \\ \hline
+%	\multicolumn{2}{l}{\ldots\small\slshape continued} \\ \hline
 %	\multicolumn{1}{c}{colTag}	%Column 1
-%	&\multicolumn{1}{c}{colTag}	%Column 2
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endhead
 
 %%  The running footer definition.                                  %%
 %	\hline
-%	\multicolumn{3}{r}{\small\slshape continued\ldots} \\
+%	\multicolumn{2}{r}{\small\slshape continued\ldots} \\
 %	\endfoot
 
 %%  The ending footer definition.                                   %%
-%	\multicolumn{3}{c}{That's all folks} \\ \hline 
+%	\multicolumn{2}{c}{That's all folks} \\ \hline 
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|-|-~}
+\hhline{|-|-}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}I}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{II}}
-	&
-\\
-\hhline{|--|~}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}(a) if $E_1$ and $E_2$ are two mutually exclusive events}
+	{\gnumericPB{\raggedright}\gnumbox[l]{(a) if $E_1$ and $E_2$ are the two mutually exclusive events}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedright}\gnumbox[l]{(i)   $E_1 \cap E_2 = E_1$}}
-	&
 \\
-\hhline{|--|~}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}(b) if $E_1$ and $E_2$ are mutually exclusive and exhaustive events}
+	{\gnumericPB{\raggedright}\gnumbox[l]{(b) if $E_1$ and $E_2$ are the mutually exclusive and exhaustive events}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedright}\gnumbox[l]{(ii)  $(E_1-E_2)\cup(E_1 \cap E_2)=E_1$}}
-	&
 \\
-\hhline{|--|~}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}(c) if $E_1$ and $E_2$ have common outcomes, then}
+	{\gnumericPB{\raggedright}\gnumbox[l]{(c) if $E_1$ and $E_2$ have common outcomes, then}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedright}\gnumbox[l]{(iii) $E_1 \cap E_2 = \phi,E_1 \cup E_2 = S$}}
-	&
 \\
-\hhline{|--|~}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}(d) if $E_1$ and $E_2$ are two events such that $E_1 \subset E_2$}
+	{\gnumericPB{\raggedright}\gnumbox[l]{(d) if $E_1$ and $E_2$ are two events such that $E_1 \subset E_2$}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedright}\gnumbox[l]{(iv) $E_1 \cap E_2 = \phi$}}
-	&
 \\
-\hhline{|-|-|~}
+\hhline{|-|-|}
 \end{tabular}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
