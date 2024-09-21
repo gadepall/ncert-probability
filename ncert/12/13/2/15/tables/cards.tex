@@ -123,11 +123,14 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	225pt+%
-	225pt+%
-	225pt+%
+	25pt+%
+	67pt+%
+	67pt+%
+	77pt+%
+	63pt+%
+	67pt+%
 0pt}
-\def\gumericNumCols{3}
+\def\gumericNumCols{6}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
          \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
 \ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
@@ -145,98 +148,116 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{50pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{225pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{225pt*\gnumericScale}@{}}x\end{tabular}}
-
-\begin{longtable}[c]{%
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{25pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{67pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{67pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColE}}{\newlength{\gnumericColE}}{}\settowidth{\gnumericColE}{\begin{tabular}{@{}p{63pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColF}}{\newlength{\gnumericColF}}{}\settowidth{\gnumericColF}{\begin{tabular}{@{}p{67pt*\gnumericScale}@{}}x\end{tabular}}
+\centering
+%\begin{longtable}[c]{%
+\begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
 	b{\gnumericColC}%
+	b{\gnumericColD}%
+	b{\gnumericColE}%
+	b{\gnumericColF}%
 	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  The longtable options. (Caption, headers... see Goosens, p.124) %%
-%	\caption{The Table Caption.}             \\	%
+%	\caption{}\label{tab:ncert/12/13/2/15}             \\	%
 % \hline	% Across the top of the table.
 %%  The rest of these options are table rows which are placed on    %%
 %%  the first, last or every page. Use \multicolumn if you want.    %%
 
 %%  Header for the first page.                                      %%
-%	\multicolumn{3}{c}{The First Header} \\ \hline 
+%	\multicolumn{6}{c}{The First Header} \\ \hline 
 %	\multicolumn{1}{c}{colTag}	%Column 1
 %	&\multicolumn{1}{c}{colTag}	%Column 2
+%	&\multicolumn{1}{c}{colTag}	%Column 3
+%	&\multicolumn{1}{c}{colTag}	%Column 4
+%	&\multicolumn{1}{c}{colTag}	%Column 5
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endfirsthead
 
 %%  The running header definition.                                  %%
 %	\hline
-%	\multicolumn{3}{l}{\ldots\small\slshape continued} \\ \hline
+%	\multicolumn{6}{l}{\ldots\small\slshape continued} \\ \hline
 %	\multicolumn{1}{c}{colTag}	%Column 1
 %	&\multicolumn{1}{c}{colTag}	%Column 2
+%	&\multicolumn{1}{c}{colTag}	%Column 3
+%	&\multicolumn{1}{c}{colTag}	%Column 4
+%	&\multicolumn{1}{c}{colTag}	%Column 5
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endhead
 
 %%  The running footer definition.                                  %%
 %	\hline
-%	\multicolumn{3}{r}{\small\slshape continued\ldots} \\
+%	\multicolumn{6}{r}{\small\slshape continued\ldots} \\
 %	\endfoot
 
 %%  The ending footer definition.                                   %%
-%	\multicolumn{3}{c}{That's all folks} \\ \hline 
+%	\multicolumn{6}{c}{That's all folks} \\ \hline 
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|-|-|-}
+\hhline{|-|-|-|-|-~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Variable}}}
+	{\gnumericPB{\centering}\gnumbox{Item}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Difficulty Levels}}}
+	{\gnumericPB{\centering}\gnumbox{$\pr{E}$ }}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Probability}}}
+	{\gnumericPB{\centering}\gnumbox{$\pr{F}$}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}\gnumbox{$\pr{EF}$}}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}\gnumbox{Independent}}
+	&
 \\
-\hhline{|---|}
+\hhline{|-----|~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$E_1$}}
+	{\gnumericPB{\centering}\gnumbox{a)}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Very-Complex}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{13}{52} = \frac{1}{4}$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$\pr{E_1}$=0.15}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{4}{52} = \frac{1}{13}$}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{52}=\pr{E}\pr{F}$}}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}\gnumbox{Yes}}
+	&
 \\
-\hhline{|---|}
+\hhline{|-----|~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$E_2$}}
+	{\gnumericPB{\centering}\gnumbox{b)}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Complex}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{26}{52} = \frac{1}{2}$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$\pr{E_2}$=0.2}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{4}{52} = \frac{1}{13}$}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}\gnumbox{$\frac{2}{52}=\frac{1}{26}=\pr{E}\pr{F}$}}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}\gnumbox{Yes}}
+	&
 \\
-\hhline{|---|}
+\hhline{|-----|~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$E_3$}}
+	{\gnumericPB{\centering}\gnumbox{c)}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Routine}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{8}{52} = \frac{2}{13}$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$\pr{E_3}$=0.31}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{8}{52} = \frac{2}{13}$}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}\gnumbox{$\frac{4}{52}=\frac{1}{13}\ne\pr{E}\pr{F}$}}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}\gnumbox{No}}
+	&
 \\
-\hhline{|---|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$E_4$}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Simple}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$\pr{E_4}$=0.26}}
-\\
-\hhline{|---|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$E_5$}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{Very-Simple}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$\pr{E_5}$=0.08}}
-\\
-\hhline{|-|-|-|}
-\end{longtable}
+\hhline{|-|-|-|-|-|~}
+%\end{longtable}
+\end{tabular}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
 \gnumericTableEnd
