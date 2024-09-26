@@ -1,0 +1,83 @@
+There are two conditions, 
+\begin{enumerate}
+\item  $s$ is chosen first:
+\begin{align}
+\pr{r\le p\,|\,s\le p} = \frac{\pr{r \le p, \, s \le p}}{\pr{s \le p}}
+\end{align}
+\begin{enumerate}
+\item $p<1$:
+This case is never possible as $s,r \ge 1$
+\item $1 \le p \le n$:
+Then we can say that,
+\begin{align}
+\pr{r \le p, \, s \le p} &= \frac{p(p-1)}{n(n-1)} \label{eq:12/13/3/34/1},\\
+\pr{s \le p} &= \frac{p}{n} \label{eq:12/13/3/34/2}
+\end{align}
+From \eqref{eq:12/13/3/34/1} and \eqref{eq:12/13/3/34/2}:
+\begin{align}
+\pr{r\le p|s\le p} &= \frac{\pr{r \le p, \, s \le p}}{\pr{s \le p}}\\
+&= \frac{\frac{p(p-1)}{n(n-1)}}{\frac{p}{n}}
+=\frac{p-1}{n-1}
+\end{align}
+\item $p>n$:
+\begin{align}
+\pr{r \le p, \, s \le p} &= 1 \label{eq:12/13/3/34/3},\\
+\pr{s \le p} &= 1 \label{eq:12/13/3/34/4}
+\end{align}
+From \eqref{eq:12/13/3/34/3} and \eqref{eq:12/13/3/34/4}:
+\begin{align}
+\pr{r\le p|s\le p} &= \frac{\pr{r \le p, \, s \le p}}{\pr{s \le p}}\\
+&= 1 
+\end{align}
+\end{enumerate}
+\item  r is chosen first:
+\begin{align}
+\pr{r\le p|s\le p} = \frac{\pr{r \le p, \, s \le p}}{\pr{s \le p}}
+\end{align}
+\begin{enumerate}
+\item $p<1$:
+This case is never possible as $r,s \ge 1$
+\item $1 \le p \le n$:
+\begin{align}
+\pr{r \le p, \, s \le p} &= \frac{p(p-1)}{n(n-1)} \label{eq:12/13/3/34/5},\\
+\pr{s \le p} &= \frac{p-1}{n-1} \label{eq:12/13/3/34/6}
+\end{align}
+From \eqref{eq:12/13/3/34/5} and \eqref{eq:12/13/3/34/6}:
+\begin{align}
+\pr{r\le p|s\le p} &= \frac{\pr{r \le p, \, s \le p}}{\pr{s \le p}}\\
+&= \frac{\frac{p(p-1)}{n(n-1)}}{\frac{p}{n}}
+=\frac{p}{n}
+\end{align}
+\item $p>n$:
+\begin{align}
+\pr{r \le p, \, s \le p} &= 1 \label{eq:12/13/3/34/7},\\
+\pr{s \le p} &= 1 \label{eq:12/13/3/34/8}
+\end{align}
+From \eqref{eq:12/13/3/34/7} and \eqref{eq:12/13/3/34/8}:
+\begin{align}
+\pr{r\le p|s\le p} &= \frac{\pr{r \le p, \, s \le p}}{\pr{s \le p}}\\
+&= 1 
+\end{align}
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
