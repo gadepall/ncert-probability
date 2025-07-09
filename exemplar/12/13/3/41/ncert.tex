@@ -1,39 +1,53 @@
 \begin{table}[!ht]
 \input{exemplar/12/13/3/41/tables/table.tex}
-\caption{random variables of objects}
+\caption{Random variable description}
 \label{tab:exemplar 12.13.3.41}
 \end{table}
+The r.vs are listed in 
+\tabref{tab:exemplar 12.13.3.41}.  From the given information,
 \begin{align}
-\pr{X=i}=
+\label{eq:12.13.3.41}
+p_{X}\brak{i}=
 \begin{cases}
-\frac{1}{6},\text{when i=1}\\
-\frac{2}{6},\text{when i=2}\\
-\frac{3}{6},\text{when i=3}
+\frac{1}{6} & i=1\\
+\frac{2}{6} & i=2\\
+\frac{3}{6} & i=3
+\end{cases}
+,\
+p_{Y|X}\brak{1|i}=
+\begin{cases}
+1 & i=1\\
+\frac{2}{3} & i=2\\
+0 & i=3
+\end{cases}
+,\
+p_{Y|X}\brak{0|i}=
+\begin{cases}
+0 & i=1\\
+\frac{1}{3} & i=2\\
+1 & i=3
 \end{cases}
 \end{align}
-
-we know that that the conditional probability is defined as
-
-                     $\pr{A|B}=\frac{\pr{A,B}}{\pr{B}}$
-
-
+%
 \begin{enumerate}
 \item
-The probability that a red ball will be selected is:
+The probability that a red ball will be selected is
 \begin{align}
-\pr{Y=1}&=\pr{Y=1,X=1}+\pr{Y=1,X=2}+\pr{Y=1,X=3}\\
-&=\pr{X=1}\times\pr{Y=1|X=1}+\pr{X=2}\times\pr{Y=1|X=2}+\pr{X=3}\times\pr{Y=1|X=3}\\
-&=\frac{1}{6}\times\frac{3}{3}+\frac{2}{6}\times\frac{2}{3}+\frac{3}{6}\times0\\
-&=\frac{7}{18}
+	\pr{Y=1}&=\sum_{i=1}^{3}\pr{Y=1,X=i}\\
+&=\sum_{i=1}^{3}\pr{Y=1 | X=i}\pr{X=i} \\
+&=\frac{1}{6}\times\frac{3}{3}+\frac{2}{6}\times\frac{2}{3}+\frac{3}{6}\times0
+=\frac{7}{18}
 \end{align}
+from \eqref{eq:12.13.3.41}.
 \item
 The probability that a white ball will be selected is:
 \begin{align}
-\pr{Y=0}&=\pr{Y=0,X=1}+\pr{Y=0,X=2}+\pr{Y=0,X=3}\\
-&=\pr{X=1}\times\pr{Y=0|X=1}+\pr{X=2}\times\pr{Y=0|X=2}+\pr{X=3}\times\pr{Y=0|X=3}\\
-&=\frac{1}{6}\times0+\frac{2}{6}\times\frac{1}{3}+\frac{3}{6}\times\frac{3}{3}\\
-&=\frac{11}{18}
+	\pr{Y=0}&=\sum_{i=1}^{3}\pr{Y=0,X=i}\\
+&=\sum_{i=1}^{3}\pr{Y=0 | X=i}\pr{X=i} \\
+&=\frac{1}{6}\times0+\frac{2}{6}\times\frac{1}{3}+\frac{3}{6}\times\frac{3}{3}
+=\frac{11}{18}
 \end{align}
+from \eqref{eq:12.13.3.41}.
 \end{enumerate}
 
 
