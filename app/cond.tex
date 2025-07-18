@@ -1,0 +1,42 @@
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item 
+\begin{align}
+	\pr{A | B} = \frac{\pr{AB}}{\pr{B}}
+\label{eq:axiom-cond}
+\end{align}
+If $A$ and $B$ are independent, from 
+\eqref{eq:axiom-cond}
+and 
+\eqref{eq:axiom-ind},
+\begin{align}
+	\pr{A | B} = \frac{\pr{A}\pr{B}}{\pr{B}}={\pr{A}}
+\label{eq:axiom-cond-ind}
+\end{align}
+\item 
+\begin{align}
+	\pr{A' | B} = \frac{\pr{A'B}}{\pr{B}} = \frac{\pr{B}-\pr{AB}}{\pr{B}}
+\label{eq:axiom-cond-prime}
+\end{align}
+\item Bayes' Theorem
+\begin{align}
+	\pr{E_1|A} &= \frac{\pr{E_1}\pr{A|E_1}}{\sum_{i=1}^{2}\pr{E_i}\pr{A|E_i}}
+\label{eq:axiom-bayes}
+\end{align}
+\item Let $X, Y \in \cbrak{0,1}$ be two random variables.  Then, 
+\begin{align}
+	\label{eq:12/13/3/43/yixj-def}
+	  \pr{Y=1|X=0}\triangleq  p_{Y|X}\brak{1|0}
+\end{align}
+\item 
+\begin{align}
+	   p_{Y|X}\brak{1|0}
+	   &=
+	   \frac{p_{X,Y}\brak{0,1}}{p_{X}\brak{0}}
+	   =
+	   \frac{p_{X}\brak{0}-p_{X,Y}\brak{0,0}}{p_{X}\brak{0}}
+	   \\
+	   &=
+	   1-\frac{p_{X,Y}\brak{0,0}}{p_{X}\brak{0}} = 1-p_{Y|X}\brak{0|0}
+	\label{eq:12/13/3/43/yixj}
+\end{align}
+\end{enumerate}

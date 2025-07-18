@@ -80,25 +80,22 @@ https://www.gnu.org/licenses/fdl-1.3.en.html
 \renewcommand{\thetable}{\theenumi}
 
 %\section{Axioms}
-\section{Definitions}
-\subsection{NCERT}
-\input{axioms/boolean/defs.tex}
-\section{Boolean Logic}
 \subsection{Formulae}
-\input{app/bool.tex}
-\subsection{NCERT}
+\input{app/axioms.tex}
+\subsection{Definitions}
+\input{axioms/boolean/defs.tex}
+\subsection{Boolean Logic}
 \input{axioms/boolean/axioms.tex}
-%\subsection{Applications}
+\subsection{Applications}
 \input{axioms/word/axioms.tex}
 \newpage
-\section{Conditional Probability}
-\subsection{Formulae}
-\input{app/cond.tex}
-\subsection{NCERT}
+\subsection{Conditional Probability}
 \input{axioms/boolean/cond.tex}
+\subsection{Applications}
 \input{axioms/word/cond.tex}
-\section{Random Variables}
+\subsection{Random Variables}
 \input{axioms/boolean/rand.tex}
+\section{Random Variables}
 \subsection{Examples}
 \input{randm/defs.tex}
 \section{Conditional Probability}
