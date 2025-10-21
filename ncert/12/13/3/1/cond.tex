@@ -1,6 +1,7 @@
+%\numberwithin{table}{enumi}
 The given information is summarized in Tables \ref{tab:12/13/3/1/1} and 
 \ref{tab:12/13/3/1/2}.
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \input{ncert/12/13/3/1/tables/12.13.3.1.tex}
 %\input{ncert/12/13/3/1/tables/table1.tex}
@@ -8,15 +9,17 @@ The given information is summarized in Tables \ref{tab:12/13/3/1/1} and
 \label{tab:12/13/3/1/1}
 \end{table}
 %
-\begin{table}[h]
+\begin{table}[H]
 \centering
-\input{ncert/12/13/3/1/tables/table2.tex}
+\input{ncert/12/13/3/1/tables/12.13.3.1.2.tex}
 \caption{}
 \label{tab:12/13/3/1/2}
-\end{table}\\
-The required probability is given by
+\end{table}
+From
+\eqref{eq:axiom-tot-prob},
+the required probability is given by
 \begin{align}
-\pr{Y = 0} &= \pr{X = 0}\pr{Y = 0 \mid X = 0} + \pr{X = 1}\pr{Y = 0 \mid X = 1}\\
+p_{Y}\brak{0} &= p_{X}\brak{0}p_{Y|X}\brak{0|0} + p_{X}\brak{1}p_{Y|X}\brak{0|1}\\
 &= \brak{\frac{5}{10} \times \frac{7}{12}} + \brak{\frac{5}{10} \times \frac{5}{12}}
 = \frac{1}{2}
 \end{align}
