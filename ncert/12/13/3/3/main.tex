@@ -1,24 +1,21 @@
-Let 
-\begin{align}
-	X &=  \begin{cases}
-     0, \text{ if student is resides in hostel}\\
-     1, \text{ if student is a day scholar} 
- \end{cases}\\
-	Y &=  \begin{cases}
-     0, \text{ if student does not attain A grade}\\
-     1, \text{ if student attains A grade} 
- \end{cases}
-\end{align}
+The given information is summarized in 
+\tabref{tab:12/13/3/3}.
+\begin{table}[H]
+\centering
+\input{ncert/12/13/3/3/tables/12.13.3.3.tex}
+\caption{}
+\label{tab:12/13/3/3}
+\end{table}
 From the given data, 
 \begin{align}
-	\pr{X=0} &= \frac{3}{5}\\
-	\pr{X=1} &= \frac{2}{5}\\
-	\pr{Y=1 \mid X=0} &= \frac{3}{10}\\
-	\pr{Y=1 \mid X=1} &= \frac{1}{5}
+	p_{X}\brak{0} = \frac{3}{5},
+	p_{X}\brak{1} = \frac{2}{5},
+	p_{Y}\brak{1 | 0} = \frac{3}{10},
+	p_{Y}\brak{1 | 1} = \frac{1}{5}
 \end{align}
  The desired probability is
  \begin{align}
-	 \pr{X=0 \mid Y=1} &= \frac{\pr{Y=1 \mid X=0}\times\pr{X=0}}{\sum_{k=0}^{1}\pr{Y=1 \mid X=k}\times\pr{X=k} }\\
+ p_{X| Y}\brak{0| 1} &= \frac{p_{Y| X}\brak{1 | 0}\times p_{X}\brak{0}}{\sum_{k=0}^{1}p_{Y| X}\brak{1 | k}\times p_{X}\brak{k} }\\
  	&= \frac{\frac{3}{10}\times\frac{3}{5}}{\frac{3}{10}\times\frac{3}{5} + \frac{1}{5}\times\frac{2}{5}}
  	= \frac{9}{13}
  \end{align}
