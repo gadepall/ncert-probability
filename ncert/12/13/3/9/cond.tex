@@ -1,20 +1,17 @@
-	The given information is listed in Tables 
-	\ref{tab:ncert/12/13/3/9/1}
-	and 
-	\ref{tab:ncert/12/13/3/9/2}
+	See \tabref{tab:ncert/12/13/3/9/1}.
 	\begin{table}[H]\centering
-	\input{ncert/12/13/3/9/tables/table.tex}
+	\input{ncert/12/13/3/9/tables/12.13.3.9.tex}
 	\caption{}
 	\label{tab:ncert/12/13/3/9/1}
 \end{table}
-
-    \begin{table}[H]\centering
-	\input{ncert/12/13/3/9/tables/table1.tex}
-	\caption{}
-	\label{tab:ncert/12/13/3/9/2}
-    \end{table}
+	From the given information, 
 \begin{align}
-	\pr{X=2 \mid Y=1} &= \frac{\pr{X=2}\pr{Y=1 \mid X=2}}{\pr{X=1}\pr{Y=1 \mid X=1}+\pr{X=2}\pr{Y=1 \mid X=2}}
-\\
-&=\frac{2}{9}
+	p_X\brak{1} &= 0.6,
+	p_X\brak{2} = 0.4,
+	p_{Y|X}\brak{1|1} = 0.7,
+	p_{Y|X}\brak{1|2} = 0.3
+	\\
+\implies	p_{X|Y}\brak{2|1}  &= \frac{p_X\brak{2} p_{Y|X}\brak{1|1} }{\sum_{i=1}^{2}p_X\brak{i} p_{Y|X}\brak{1|i}}
+=\frac{2}{9}
 \end{align}
+upon substituting numerical values and simplifying.

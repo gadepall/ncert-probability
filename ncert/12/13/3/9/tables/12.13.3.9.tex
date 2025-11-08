@@ -123,11 +123,12 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	61pt+%
-	53pt+%
-	350pt+%
+	45pt+%
+	33pt+%
+	127pt+%
+	77pt+%
 0pt}
-\def\gumericNumCols{3}
+\def\gumericNumCols{4}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
          \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
 \ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
@@ -145,14 +146,16 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{61pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{350pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{33pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{127pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{77pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{longtable}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
 	b{\gnumericColC}%
+	b{\gnumericColD}%
 	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,55 +166,84 @@
 %%  the first, last or every page. Use \multicolumn if you want.    %%
 
 %%  Header for the first page.                                      %%
-%	\multicolumn{3}{c}{The First Header} \\ \hline 
+%	\multicolumn{4}{c}{The First Header} \\ \hline 
 %	\multicolumn{1}{c}{colTag}	%Column 1
 %	&\multicolumn{1}{c}{colTag}	%Column 2
+%	&\multicolumn{1}{c}{colTag}	%Column 3
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endfirsthead
 
 %%  The running header definition.                                  %%
 %	\hline
-%	\multicolumn{3}{l}{\ldots\small\slshape continued} \\ \hline
+%	\multicolumn{4}{l}{\ldots\small\slshape continued} \\ \hline
 %	\multicolumn{1}{c}{colTag}	%Column 1
 %	&\multicolumn{1}{c}{colTag}	%Column 2
+%	&\multicolumn{1}{c}{colTag}	%Column 3
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endhead
 
 %%  The running footer definition.                                  %%
 %	\hline
-%	\multicolumn{3}{r}{\small\slshape continued\ldots} \\
+%	\multicolumn{4}{r}{\small\slshape continued\ldots} \\
 %	\endfoot
 
 %%  The ending footer definition.                                   %%
-%	\multicolumn{3}{c}{That's all folks} \\ \hline 
+%	\multicolumn{4}{c}{That's all folks} \\ \hline 
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|-|-|-}
+\hhline{|-|-|-~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{RV}}}
+	{\gnumericPB{\centering}\gnumbox{\textbf{Variable}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Values}}}
+	{\gnumericPB{\centering}\gnumbox{\textbf{Value}}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Description}}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{Description}}}
+	&
 \\
-\hhline{|---|}
+\hhline{|---|~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$X$}}
+	{\setlength{\gnumericMultiRowLength}{0pt}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
+	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
+	 \gnumericPB{\centering}\gnumbox{X}}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{\{1,2\}}}
+	{\gnumericPB{\centering}\gnumbox{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{1:Group1 ,2:Group2}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Group 1 wins}}
+	&
 \\
-\hhline{|---|}
+\hhline{~|--|~}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$Y$}}
+	{}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{\{0,1\}}}
+	{\gnumericPB{\centering}\gnumbox{2}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{0:New product not introduced ,1:New product introduced}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Group 2 wins}}
+	&
 \\
-\hhline{|-|-|-|}
+\hhline{|---|~}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\setlength{\gnumericMultiRowLength}{0pt}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
+	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
+	 \gnumericPB{\centering}\gnumbox{Y}}}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{0}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{New product introduced}}
+	&
+\\
+\hhline{~|--|~}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{1}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{No new product introduced}}
+	&
+\\
+\hhline{|-|-|-|~}
 \end{longtable}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
