@@ -1,17 +1,23 @@
 See 
 \tabref{tab:ncert/12/13/3/5/1} for the given information.
 \begin{table}[H]
-\input{ncert/12/13/3/5/tables//table1}
+	\centering
+\input{ncert/12/13/3/5/tables/12.13.3.5.tex}
 \caption{}
 \label{tab:ncert/12/13/3/5/1}
 \end{table}
 %
+From the given information,
 \begin{align}   
-\Pr(E_2) = 1 - \Pr(E_1)
+	p_{Y}\brak{0} &= 1 - p_{Y}\brak{1}
  = 1 -0.001
  = 0.999
  \\
-  \therefore  \Pr(E_1|A) = \frac{\Pr(E_1)\Pr(A|E_1)}{\sum_{i=1}^{2}\Pr(E_i)\Pr(A|E_i)}\\
+	p_{X|Y}\brak{1|1}&=0.99, 
+ p_{X|Y}\brak{0|1}=0.005 
+\end{align}
+\begin{align}   
+	\therefore  p_{Y|X}\brak{1|1} = \frac{p_Y\brak{1}p_{X|Y}\brak{1|1}}{\sum_{i=1}^{2}p_Y\brak{i}p_{X|Y}\brak{1|i}}\\
      = \frac{0.001\times 0.99}{0.001\times0.99 + 0.999\times0.005}
       = \frac{22}{133}
 \end{align}
