@@ -1,23 +1,24 @@
-		Consider the random variables $A,X$ as described in the table \ref{tab:12/13/3/13/1}.
+See \tabref{tab:12/13/3/13/1}.
 \begin{table}[H]
 \centering
-\input{ncert/12/13/3/13/tables/table1.tex}
+\input{ncert/12/13/3/13/tables/12.13.3.13.tex}
 \caption{}
 \label{tab:12/13/3/13/1}
 \end{table}
 %
-The given information about probabilities is listed in table \ref{tab:12/13/3/13/2}.
-\begin{table}[H]
-\centering
-\input{ncert/12/13/3/13/tables/table2.tex}
-\caption{}
-\label{tab:12/13/3/13/2}
-\end{table}
-The required probability is given by
+From the given information, 
 \begin{align}
-\pr{A = 1 \mid X = 1} &= \frac{\pr{A = 1} \pr{X = 1 \mid A = 1}}{\pr{X = 1}}\\
+	p_{X}(0)&=p_{X}(1) = \frac{1}{2},  p_{Y}(1)= \frac{4}{5}
+\\
+\therefore p_{Y|X}(1|1)&= \frac{p_{Y}(1) p_{X|Y}(1|1)}{p_{X}(1)}\\
 &= \frac{\frac{4}{5} \times \frac{1}{2}}{\frac{1}{2}}
 = \frac{4}{5}
 \end{align}
-
+Here, we have used the fact that
+\begin{align}
+p_{X|Y}(1|1)
+=
+p_{X}(1) = \frac{1}{2}.
+\end{align}
+since the appearance of a head upon a coin toss has nothing to do with A.
 
