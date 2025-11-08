@@ -2,17 +2,22 @@ The given information is summarised in
 \tabref{tab:ncert/12/13/6/13/1}.
 \begin{table}[htb]
 	\centering
-\input{ncert/12/13/6/13/tables/table1.tex}
+\input{ncert/12/13/6/13/tables/12.13.6.13.tex}
 \caption{}
 \label{tab:ncert/12/13/6/13/1}
 \end{table}
 %
+The given probabilities are
 \begin{align}
-	\therefore	\pr{A|E_1} &= \pr{A}\cbrak{1-(0.30)}
+	p_X\brak{0} &= 0.4,
+	p_Y\brak{0} =
+	p_Y\brak{1} = 0.5
+	\\
+p_{X|Y}(0|1) &= p_{X}\brak{1-0.30}
 	 =  0.28
 	\label{eq:ncert/12/13/6/13/4}
 	\\
-	\pr{A|E_2} &= \pr{A}\cbrak{1-(0.25)}
+p_{X|Y}(0|0) &= p_{X}\brak{1-0.25}
 	=  0.30
 	\label{eq:ncert/12/13/6/13/5}
 \end{align}
@@ -20,7 +25,8 @@ From
 %\eqref{eq:ncert/12/13/6/13/4} and \eqref{eq:ncert/12/13/6/13/5},
 \eqref{eq:axiom-bayes},
 \begin{align}
-	\pr{E_1|A} &= \frac{\pr{E_1}\pr{A|E_1}}{\sum_{i=1}^{2}\pr{E_i}\pr{A|E_i}}
+p_{Y|X}(1|0) &= 
+	 \frac{p_{X|Y}(0|1)p_Y\brak{1}}{\sum_{i=0}^{2}p_{X|Y}(0|i)p_Y\brak{i}}
 	= \frac{\frac{1}{2}\times 0.28}{\frac{1}{2}\times 0.28 + \frac{1}{2}\times 0.30}
 	= \frac{14}{29}
 \end{align}
