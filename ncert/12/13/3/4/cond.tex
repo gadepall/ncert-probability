@@ -1,7 +1,7 @@
-See  Tables
+See  Table
 \ref{tab:ncert/12/13/3/4/1}
-and 
-	\ref{tab:ncert/12/13/3/4/2}
+%and 
+%	\ref{tab:ncert/12/13/3/4/2}
 %
 \begin{table}[H]
 	\centering
@@ -10,18 +10,26 @@ and
 \caption{}
 \label{tab:ncert/12/13/3/4/1}
 \end{table}
-
+From the given information,
+\begin{align}
+	p_{Y|X}\brak{1|0}=\frac{1}{4},
+	p_{Y|X}\brak{1|1}=1,
+	p_X\brak{0} = \frac{1}{4},
+	p_X\brak{1} = \frac{3}{4}
+\end{align}
+\iffalse
 \begin{table}[H]
 	\centering
 	\input{ncert/12/13/3/4/tables/table2.tex}
 	\caption{}
 	\label{tab:ncert/12/13/3/4/2}
 \end{table}
+\fi
 %
-The probability that the student knows the answer and he answered it correctly is 
+The desired probability is
 %
 \begin{align}
-	\pr{X=1|Y=1} &=\frac{\pr{Y=1|X=1}\pr{X=1}}{\sum_{i=0}^{1}Pr(Y=1|X=i)Pr(X=i)}\\
-	&=\frac{0.75}{{0.25\times0.25}+{1\times0.75}}
-	=0.92308
+p_{X|Y}\brak{1|1} &=\frac{p_{Y|X}\brak{1|1}p_{X}\brak{1}}{\sum_{i=0}^{1}p_{Y|X}\brak{1|i}p_X\brak{i}}\\
+	&=\frac{\frac{3}{4}}{{\frac{1}{4}\times\frac{1}{4}}+{1\times\frac{3}{4}}}
+	=\frac{4}{5}
 	\end{align}
