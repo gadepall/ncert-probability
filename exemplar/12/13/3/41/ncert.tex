@@ -33,9 +33,8 @@ p_{Y|X}\brak{0|i}=
 \item
 The probability that a red ball will be selected is
 \begin{align}
-	\pr{Y=1}&=\sum_{i=1}^{3}\pr{Y=1,X=i}\\
-&=\sum_{i=1}^{3}\pr{Y=1 | X=i}\pr{X=i} 
-=\sum_{i=1}^{3}p_{Y|X}\brak{1|i}p_{X}\brak{i} \\
+p_{Y}\brak{1}
+&=\sum_{i=1}^{3}p_{Y|X}\brak{1|i}p_{X}\brak{i} \\
 &=\frac{1}{6}\times\frac{3}{3}+\frac{2}{6}\times\frac{2}{3}+\frac{3}{6}\times0
 =\frac{7}{18}
 \end{align}
@@ -43,7 +42,7 @@ from \eqref{eq:12.13.3.41}.
 \item
 The probability that a white ball will be selected is
 \begin{align}
-	\pr{Y=0}&=\sum_{i=1}^{3}\pr{Y=0,X=i}\\
+p_{Y}\brak{0}
 		&=\sum_{i=1}^{3}p_{Y|X}\brak{0|i}p_{X}\brak{i} \\
 &=\frac{1}{6}\times0+\frac{2}{6}\times\frac{1}{3}+\frac{3}{6}\times\frac{3}{3}
 =\frac{11}{18}
