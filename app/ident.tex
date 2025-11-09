@@ -1,7 +1,7 @@
-\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+%\numberwithin{equation}{enumi}
+%\numberwithin{figure}{enumi}
+%\numberwithin{table}{enumi}
 \item 
 Let 
 \begin{align}
@@ -9,7 +9,7 @@ Let
 \end{align}
 where $R,B,G$ and $r,b,g$ represent the number of red, blue and green marbles respectively within $N$ and $n$.  Then
 \begin{align}
-	\pr{r,b,g} = 
+	p_{R,G,B}\brak{r,b,g} = 
 	\frac{\comb{R}{r}
 	\comb{B}{b}
 	\comb{G}{g}}
@@ -21,9 +21,10 @@ where $R,B,G$ and $r,b,g$ represent the number of red, blue and green marbles re
 \solution 
 		The number of ways of choosing $n$ marbles from $N$ is 
 \begin{align}
-	\comb{N}{n}
+	\comb{N}{n}=
+	\comb{R+B+G}{r+b+g}
 \end{align}
-The number of ways of choosing r,b,g marbles is
+The number of ways of choosing $r,b,g$ marbles is
 \begin{align}
 	\comb{R}{r}
 	\comb{B}{b}
