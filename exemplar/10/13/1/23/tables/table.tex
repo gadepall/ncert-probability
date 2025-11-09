@@ -124,9 +124,9 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	75pt+%
-	75pt+%
-	75pt+%
+	25pt+%
+	25pt+%
+	50pt+%
 0pt}
 \def\gumericNumCols{3}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -146,9 +146,9 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{125pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{75pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{50pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{25pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{100pt*\gnumericScale}@{}}x\end{tabular}}
 
 %\begin{longtable}[c]{%
 \begin{tabular}[c]{%
@@ -202,7 +202,7 @@
 	{\setlength{\gnumericMultiRowLength}{0pt}%
 	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
 	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
-	 \gnumericPB{\centering}\gnumbox{Random Variable $X$}}}}
+	 \gnumericPB{\centering}\gnumbox{$X$}}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedright}\gnumbox[l]{0}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
