@@ -145,9 +145,9 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{250pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{139pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{442pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{200pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{100pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{400pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
@@ -191,9 +191,9 @@
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{\gnumericPB{\centering}\gnumbox{Random variable}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{values}}
+	{\gnumericPB{\centering}\gnumbox{Value}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Events}}
+	{\gnumericPB{\centering}\gnumbox{Description}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -204,7 +204,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{0}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{The numbers are consecutive}}
+	{\gnumericPB{\centering}\gnumbox{The numbers are not consecutive}}
 \\
 \hhline{~|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
@@ -212,7 +212,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{The numbers are not consecutive}}
+	{\gnumericPB{\centering}\gnumbox{The numbers are consecutive}}
 \\
 \hhline{|-|-|-|}
 \end{tabular}
