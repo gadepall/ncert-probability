@@ -6,20 +6,14 @@ p_{X}(n) =
 \begin{cases}
 \frac{1}{6} & 1 \le n \le 6
 \\
-0 & otherwise
+0 & \text{otherwise}
 \end{cases}
 \end{align}
-\item The $Z$-transform of $X$ is given by 
-\begin{align}
-P_{X}(z) =  \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
-=\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}, \quad \abs{z} > 1
-\label{eq:dice_xiz}
-\end{align}
-upon summing up the geometric progression.  
-\item From \eqref{eq:dice_xiz}, the CDF of $X$ is given by
+\item 	The CDF of $X$ is given by
 \begin{align}
 F_{X}\brak{n} = 	\pr{X \le n} 
- = 
+= \sum_{k = 1}^{n}p_X(k)
+=
 \begin{cases}
 0 & n < 1 \\
 \frac{n}{6} & 1 \le n \leq 6 \\
