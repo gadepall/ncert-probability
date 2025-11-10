@@ -1,12 +1,13 @@
-\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
 \item A die is thrown twice. What is the probability that
-\begin{enumerate}[font=\large\bfseries]
+\begin{enumerate}
 	\item 5 will not come up either time? 
 	\item 5 will come up at least once?
 \end{enumerate}
 \solution
-\input{ncert/10/15/1/24/binom.tex}
+ \input{ncert/10/15/1/24/binom.tex}
   \item Three coins are tossed once. Find the probability of getting 
+	  \begin{multicols}{3}
     \begin{enumerate}
         \item 3 heads
         \item 2 heads
@@ -18,26 +19,26 @@
         \item no tail
         \item atmost two tails
     \end{enumerate}
+\end{multicols}
 \solution
-\input{ncert/11/16/3/8/binom.tex}
+ \input{ncert/11/16/3/8/binom.tex}
 	\item 
-	A game consists of tossing a one rupee coin 3 times and noting its outcome each time. Hanif wins if all the tosses give the same result i.e., three heads or three tails, and loses otherwise. Calculate the probability that Hanif will lose the game
+	A game consists of tossing a one rupee coin 3 times and noting its outcome each time. Hans wins if all the tosses give the same result i.e., three heads or three tails, and loses otherwise. Calculate the probability that Hans will lose the game.
 \\
-\input{ncert/10/15/1/23/main.tex}
-%\input{ncert/12/13/1/1/cond.tex}
-\item A coin is tossed three times, where. Determine \pr{E \mid F} where
+ \input{ncert/10/15/1/23/main.tex}
+\item A coin is tossed three times. Determine \pr{E|F} where
 \begin{enumerate}
 \item $E$ : head on third toss, $F$ : heads on first two tosses
 \item $E$ : at least two heads, $F$ : at most two heads
 \item $E$ : at most two tails, $F$ : at least one tail
 \end{enumerate}
 \solution 
-\input{ncert/12/13/1/6/cond.tex}
+ \input{ncert/12/13/1/6/cond.tex}
 \item A die is tossed thrice. Find the probability of getting an odd number at least once.
 %		\label{ncert/12/13/2/12}
 		\\
 	\solution
-\input{ncert/12/13/2/12/binom.tex}
+% \input{ncert/12/13/2/12/binom.tex}
 \item Find the probability distribution of
 \begin{enumerate}
 	\item number of heads in two tosses of a coin.
@@ -45,7 +46,7 @@
 	\item number of heads in four tosses of a coin.
 \end{enumerate}
 \solution
-\input{ncert/12/13/4/4/dist.tex}
+% \input{ncert/12/13/4/4/dist.tex}
 \item Find the probability distribution of the number of successes in two tosses of a die,
 where a success is defined as\\
 \begin{enumerate}
@@ -53,11 +54,11 @@ where a success is defined as\\
 \item six appears on at least one die
 \end{enumerate}
 \solution
-\input{ncert/12/13/4/5/binom.tex}
+% \input{ncert/12/13/4/5/binom.tex}
 \item There are 5\% defective items in a large bulk of items. What is the probability that a sample of 10 items will include not more than one defective item?
 	\\
 \solution
-\input{ncert/12/13/5/3/main.tex}
+% \input{ncert/12/13/5/3/main.tex}
 \item Five cards are drawn successively with replacement from a well-shuffled deck
 of 52 cards. What is the probability that
 \begin{enumerate}
@@ -66,7 +67,7 @@ of 52 cards. What is the probability that
     \item none is a spade?
 \end{enumerate}
 \solution
-\input{ncert/12/13/5/4/binom.tex}
+% \input{ncert/12/13/5/4/binom.tex}
 \item The probability that a bulb produced by a factory will fuse after 150 days of use
 is $0.05$. Find the probability that out of 5 such bulbs
 \begin{enumerate}
@@ -78,33 +79,33 @@ is $0.05$. Find the probability that out of 5 such bulbs
 will fuse after 150 days of use.
 \\
 \solution
-\input{ncert/12/13/5/5/binom.tex}
+% \input{ncert/12/13/5/5/binom.tex}
 \item A bag consists of 10 balls each marked with one of the digits 0 to 9. If 4 balls are drawn successively with replacement from the bag, what is the probability that none is marked with the digit 0?
 \\
 \solution
-\input{ncert/12/13/5/6/main.tex}
+% \input{ncert/12/13/5/6/main.tex}
 \item How many times must a man toss a fair coin so that the probability of having at least one head is more than 90\%?
 \\
-\input{ncert/12/13/6/10/binom.tex}
+% \input{ncert/12/13/6/10/binom.tex}
 \item In an examination, 20 questions of true-false type are asked. Suppose a student tosses a fair coin to determine his answer to each question. If the coin falls heads, he answer true; if it falls tails, he answer false. Find the probability that he answers at least 12 questions correctly.\\
 \\
 \solution
-\input{ncert/12/13/5/7/binom.tex}
+% \input{ncert/12/13/5/7/binom.tex}
 \item Find the probability of getting 5 twice in 7 throws of a dice.\\
 \\
 \solution
-\input{ncert/12/13/5/11/binom.tex}
+% \input{ncert/12/13/5/11/binom.tex}
 \item On a multiple choice examination with three possible answers for each of the five questions, what is the probability that a candidate would get four or more correct answers just by guessing$?$
 \\
 \solution
-\input{ncert/12/13/5/9/binom.tex}
+% \input{ncert/12/13/5/9/binom.tex}
 \item Find the probability of throwing at most 2 sixes in 6 throws of a single die.\\
 \solution
-\input{ncert/12/13/5/12/binom.tex}
+% \input{ncert/12/13/5/12/binom.tex}
 \item Suppose that 90 \% of people are right-handed. What is the probability that atmost 6 of a random sample of 10 people are right-handed. 
 \\
 \solution
-\input{ncert/12/13/6/4/main.tex}
+% \input{ncert/12/13/6/4/main.tex}
   \item An urn contains 25 balls of which 10 balls bear a mark `X' and the 
     remaining 15 bear a mark `Y'. A ball is drawn at random from the urn, its 
     mark is noted down and it is replaced. If 6 balls are drawn in this way, 
@@ -116,7 +117,7 @@ will fuse after 150 days of use.
         \item the number of balls with `X' mark and `Y' mark will be equal.
     \end{enumerate}
 \solution
-\input{ncert/12/13/6/5/binom.tex}
+% \input{ncert/12/13/6/5/binom.tex}
 
 \item An urn contains 5 red and 2 black balls. Two balls are randomly drawn. Let X
 represent the number of black balls. What are the possible values of X? Is X a
@@ -142,39 +143,39 @@ tossed twice, find the probability distribution of number of tails.
 \item A coin is tossed twice, what is the probability that atleast one tail occurs?
 \\
 \solution
-\input{ncert/11/16/3/2/binom.tex}
+% \input{ncert/11/16/3/2/binom.tex}
 \item From a lot of 30 bulbs which include 6 defectives, a sample of 4 bulbs is drawn
 at random with replacement. Find the probability distribution of the number of
 defective bulbs.
  \item Suppose $X$ is a binomial distribution $B\left(6,\frac{1}{2}\right)$. Show that $X=3$ is the most likely outcome.
 (Hint : $P(X=3)$ is the maximum among all $P(x_i),x_i=0,1,2,3,4,5,6$)
-\input{ncert/12/13/5/8/main.tex}
+% \input{ncert/12/13/5/8/main.tex}
 \item A fair coin is tossed four times, and a person win Re $1$ for each head and lose Rs $1.5$ for each tail that turns up.\\
 From the sample space calculate how many different amounts of money you can have after four tosses and the probability of having each of these amounts.
 \\
 \solution
-\input{ncert/11/16/3/7a/Q11.16.3.7.tex}
+% \input{ncert/11/16/3/7a/Q11.16.3.7.tex}
 \item It is known that 10 $\%$ of certain articles manufactured are defective. What is the probability that in a random sample space of 12 such articles,9 are defective? \\
 \solution
-\input{ncert/12/13/5/13/12.13.5.13/main.tex}
+% \input{ncert/12/13/5/13/12.13.5.13/main.tex}
 \item A coin is tossed two times. Find the probability of getting at most one head.
 \\
 \solution
-\input{exemplar/10/13/3/24/ncertq2.tex}
+% \input{exemplar/10/13/3/24/ncertq2.tex}
 \item An experiment succeeds twice as often as it fails. Find the probability that in the next
 six trials, there will be atleast 4 successes.
 \solution
-\input{ncert/12/13/6/9/main.tex}
+% \input{ncert/12/13/6/9/main.tex}
 \item A die is thrown 5 times. Find the probability that an odd number will come up exactly three times.
 		\solution
-	\input{exemplar/12/13/3/20/main.tex}
+% \input{exemplar/12/13/3/20/main.tex}
 \item A coin is tossed 3 times. List the possible outcomes. Find the probability of getting
 (i) all heads (ii) at least 2 heads \\
 \solution
-\input{exemplar/10/13/3/25/main.tex}
+% \input{exemplar/10/13/3/25/main.tex}
 \item Ten coins are tossed. What is the probability of getting atleast 8 heads?
 \\
-\input{exemplar/12/13/3/21/main.tex}
+% \input{exemplar/12/13/3/21/main.tex}
 \item A factory produces bulbs. The probability that any one bulb is defective is $\frac{1}{50}$ and they are packed in boxes of 10. From a single box, find the probability that
 \begin{enumerate}
 \item none of the bulb is defective 
@@ -182,7 +183,7 @@ six trials, there will be atleast 4 successes.
 \item more than 8 bulbs are working properly
 \end{enumerate}
 \solution
-\input{exemplar/12/13/3/31/main.tex}
+% \input{exemplar/12/13/3/31/main.tex}
 \item A lot of 100 watches is known to have 10 defective watches. If 8 watches are
 selected (one by one with replacement) at random, what is the probability that
 there will be at least one defective watch?
@@ -206,26 +207,26 @@ there will be at least one defective watch?
 \item  Find \pr{X < 2},\pr{X \leq 2},\pr{X \geq 2}  
 		\end{enumerate}
 \solution
-\input{ncert/12/13/4/9/dist.tex}
+% \input{ncert/12/13/4/9/dist.tex}
 \item State which of the following are not the probability distributions of a random 
 variable. Give reasons for your answer
 \renewcommand{\labelenumii}{\roman{enumii}}
 \begin{enumerate}
 
 \item \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book.tex}
+% \input{ncert/13/4/tables/Book.tex}
 \end{table}
 
 \item \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book2.tex}
+% \input{ncert/13/4/tables/Book2.tex}
 \end{table}
 
 \item  \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book3.tex}	
+% \input{ncert/13/4/tables/Book3.tex}	
 \end{table}
 
 \item  \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book5.tex}	
+% \input{ncert/13/4/tables/Book5.tex}	
 \end{table} 
 
 
@@ -236,7 +237,7 @@ Determine
 
 \begin{enumerate}
 \begin{table}[ht!]\centering
-\input{ncert/13/4/tables/Book10.tex}
+% \input{ncert/13/4/tables/Book10.tex}
 \end{table}
 \item k
 \item P$(X < 3)$
@@ -265,13 +266,13 @@ A game consists of spinning an arrow which comes to rest pointing at one of the 
 		\resizebox{\columnwidth}{!}{\input{exemplar/10/13/2/6/figs/circle.tex}}
 	\end{center}
 	\caption{Fig.13.1}
-	\label{fig:circle.tex}	
+	\label{fig:binom-circle.tex}	
 \end{figure}\\
 \solution
-\input{exemplar/10/13/2/6/main.tex}
+% \input{exemplar/10/13/2/6/main.tex}
 \item Apoorv throws two dice once and computes the product of the numbers appearing on the dice. Peehu throws one die and squares the number that appears on it. Who has the better chance of getting the number 36? Why?\\
 \solution
-\input{exemplar/10/13/2/7/ncert.tex}
+% \input{exemplar/10/13/2/7/ncert.tex}
 \item 6 boys and 6 girls sit in a row at random. The probability that all the girls sit
 together is
 \begin{enumerate}
@@ -280,11 +281,11 @@ together is
 	\item $\frac{1}{132}$
 	\item none of the above 
 \end{enumerate}
-			\input{exemplar/11/16/3/25/main.tex}
+% \input{exemplar/11/16/3/25/main.tex}
 \item A card is selected from a deck of 52 cards. The probability of its being a red face card is
-\input{exemplar/10/13/1/18/main.tex}
+% \input{exemplar/10/13/1/18/main.tex}
 \item A die is loaded in such a way that each odd number is twice as likely to occur as each even number. Find P(G), where G is the event that a number greater than 3 occurs on a single roll of the die.\\
-\input{exemplar/11/16/3/5_1/main.tex}
+% \input{exemplar/11/16/3/5_1/main.tex}
 
 \item Determine the probability $p$,for each of following events.
 \begin{enumerate}
@@ -293,14 +294,14 @@ together is
 \item A king,9 of hearts or 3 of spades appears in drawing a single card from a well shuffled deck of 52 cards.
 \item The sum of 6 appears in single toss of a pair of fair dice.
 \end{enumerate}
-\input{exemplar/11/16/3/17/ncert.tex}
+% \input{exemplar/11/16/3/17/ncert.tex}
 \item Determine the probability p, for each of the following events.\\
 (a) An odd number appears in a single toss of a fair die.\\
 (b) At least one head appears in two tosses of a fair coin.\\
 (c) A king, 9 of hearts, or 3 of spades appears in drawing a single card from a
 well shuffled ordinary deck of 52 cards.\\
 (d) The sum of 6 appears in a single toss of a pair of fair dice.
-\input{exemplar/11/16/3/17/main.tex}
+% \input{exemplar/11/16/3/17/main.tex}
 \item A die is thrown twice. What is the probability that
 \begin{enumerate}[font=\large\bfseries]
 	\item 5 will not come up either time? 
@@ -586,12 +587,13 @@ two children, what is the conditional probability that both are girls given that
 	\item  At least one is a girl
 \end{enumerate}
 \solution
-		\input{ncert/12/13/1/12/binom.tex}
+% \input{ncert/12/13/1/12/binom.tex}
 \item In an examination, 20 questions of true-false type are asked. Suppose a student tosses a fair coin to determine his answer to each question. If the coin falls heads, he answer true; if it falls tails, he answer false. Find the probability that he answers at least 12 questions correctly.\\
 \\
 \solution
-\input{ncert/12/13/5/7/main.tex}
+% \input{ncert/12/13/5/7/main.tex}
 \item The probability of getting a bad egg in a lot of 400 is 0.035. The number of bad eggs in the lot is\\
 \solution
 %\input{exemplar/10/13/1/22/main.tex}
+\end{enumerate}
 \end{enumerate}

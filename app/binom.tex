@@ -35,8 +35,14 @@ and
 	\\
 	0 & \text{otherwise}
 	\end{cases}
+\label{eq:pmf-binom}
 \end{align}
 upon comparing with \eqref{eq:dice_xz}.
+\item The CDF of $X$ is 
+\begin{align}
+	\pr{X \le k} = F_X\brak{k} = \sum_{r=0}^{k}\brak{1-p}^{n-r}p^r 0 \le k \le n
+\label{eq:cdf-binom}
+\end{align}
 \item In a hurdle race, a player has to cross 10 hurdles. The probability that he will
 clear each hurdle is $\frac{5}{6}$. What is the probability that he will knock down fewer than 2 hurdles?
 \\
