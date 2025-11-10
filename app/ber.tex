@@ -14,4 +14,16 @@ with pmf
 		0 & \text{otherwise}
 \end{cases}
 \end{align}
+\item For a Bernoulli random variable $X$ with success probability $p$,
+\begin{align}
+M_X(z)= q+pz^{-1}
+\end{align}
+\item The mean of the Bernoulli distribution is 
+\begin{align}
+	E\brak{X} = p
+\end{align}
+\item 	The following code simulates 100 coin tosses
+	\lstinputlisting{
+codes/bernoulli/coin.py
+}
 \end{enumerate}

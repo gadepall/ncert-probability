@@ -1,55 +1,47 @@
-From \eqref{eq:dice_pmf_xi},
+%From \eqref{eq:dice_pmf_xi},
 The $Z$-transform of the first die $X_1$ is given by 
+\eqref{eq:dice_xiz}.
+The pmf of the second die is 
 \begin{align}
-M_{X_1}(z) =  \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
-=\frac{z^{-1}{(1-z^{-6})}}{6{(1-z^{-1})}}, {|z|} > 1
+\label{eq:dice_pmf_x2}
+p_{X_2}(n) = 
+\begin{cases}
+\frac{1}{3} & 1 \le n \le 3 
+\\
+0 & \text{otherwise}
+\end{cases}
 \end{align}
-
-The $Z$-transform of the second die $X_2$ is given by 
+yielding 
 \begin{align}
 M_{X_2}(z) =  \frac{1}{3}\sum_{n = 1}^{3}z^{-n}
 =\frac{z^{-1}{(1-z^{-3})}}{3{(1-z^{-1})}}, {|z|} > 1
 \end{align}
-
-The $Z$-transform of X is given as:
-
+upon substituting in 
+\eqref{eq:dice_xz}.
+From 
+\eqref{eq:dice_xzprod_def},
+The $Z$-transform of X is given as
 \begin{align}
-  M_X(z) = \frac{z^{-1}{(1-z^{-6})}}{6{(1-z^{-1})}} \times \frac{z^{-1}{(1-z^{-3})}}{3{(1-z^{-1})}}
+	M_X(z) &= \frac{z^{-1}{(1-z^{-6})}}{6{(1-z^{-1})}} \times \frac{z^{-1}{(1-z^{-3})}}{3{(1-z^{-1})}}
 \\
-  M_X(z) = \frac{1}{18}\left[\frac{z^{-2}{(1-z^{-3}-z^{-6}-z^{-9})}}{{(1-z^{-1})}^2}\right]
+	       &= \frac{1}{18}\left[\frac{z^{-2}\brak{(1-z^{-3}-z^{-6}-z^{-9})}}{{(1-z^{-1})}^2}\right]
 \end{align}
-
-We also know that,
-%\cite{proakis_dsp}
-\begin{align}
-p_X(n-k) \xleftrightarrow{Z} M_X(z)z^{-k}; \\
-nu(n) \xleftrightarrow{Z} \frac{z^{-1}}{({1-z^{-1}})^2}
-\end{align}
-
-Hence, after some algebra, it can be shown that,
+Using 
+\eqref{eq:dice_xdef_props},
+after some algebra, it can be shown that,
 \begin{multline}
-\frac{1}{18}[{{n-1}u(n-1)-{n-4}u(n-4)}\\
+\frac{1}{18}[{{n-1}u(n-1)-{n-4}u(n-4)}
 {-(n-7)u(n-7)-(n-10)u(n-10)}]\\
-\xleftrightarrow{Z}\\
+\system{Z}\\
 \frac{1}{18} \left[{\frac{z^{-2}{1-z^{-3}-z^{-6}-z^{-9}}}{({1-z^{-1}})^2}}\right]
 \end{multline}
-
-where,
-\begin{align}
-u(n) =
-\begin{cases}
-1 & n \ge 0
-\\
-0 & n < 0
-\end{cases}
-\end{align}
-
-hence,
+Hence,
+\iffalse
 \begin{multline}
 p_{X}(n) = \frac{1}{18}[{{n-1}u(n-1)-{n-4}u(n-4)-}\\
               {(n-7)u(n-7)-(n-10)u(n-10)}]
 \end{multline}
-
+\fi
 \begin{align}
   p_X(n) &= 
   \begin{cases}
@@ -64,6 +56,7 @@ p_{X}(n) = \frac{1}{18}[{{n-1}u(n-1)-{n-4}u(n-4)-}\\
   0 & n \ge 10
   \end{cases}
   \end{align}
+  \iffalse
 hence, the probabilities are,
 \begin{align}
   p_X(n) &= 
@@ -78,12 +71,13 @@ hence, the probabilities are,
    \frac{1}{18} & n = 9 
 \end{cases}
 \end{align}
-
-\bigskip
+\fi
+See \figref{fig:mgf-sum-2}.
 The experiment of rolling the dice was simulated using Python for 10000 samples.  
 %
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{exemplar/10/13/3/23/figs/pmf.png}
 \caption{Plot of $p_X(n)$.Simulations are close to the analysis. }
+\label{fig:mgf-sum-2}
 \end{figure}
