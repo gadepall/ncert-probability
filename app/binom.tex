@@ -2,7 +2,7 @@
 \item The Binomial distribution is defined as 
 \begin{align}
 \label{eq:binom-ber}
-X &= X_1+X_2+...+X_n,
+X &= X_1+X_2+\dots+X_n,
 \end{align}
 Where $X_i$ are i.i.d bernoulli.
 \item For $X_i\sim \text{Ber}\brak{p}$,
@@ -23,8 +23,23 @@ using
 \eqref{eq:binom-ber}
 and
 \eqref{eq:dice_xzprod_def}.
+\item Expanding
+\eqref{eq:mgf-binom},
+\begin{align}
+	M_X(z)&= \sum_{k=0}^{n}\brak{1-p}^{n-k}p^kz^{-k}
+	\\
+	\implies p_X(k)
+	      &=
+	\begin{cases}
+	\brak{1-p}^{n-k}p^k & 0 \le k \le n
+	\\
+	0 & \text{otherwise}
+	\end{cases}
+\end{align}
+upon comparing with \eqref{eq:dice_xz}.
 \item In a hurdle race, a player has to cross 10 hurdles. The probability that he will
 clear each hurdle is $\frac{5}{6}$. What is the probability that he will knock down fewer than 2 hurdles?
+\\
 \solution See the following code
 		\lstinputlisting{codes/binomial/binomial.py}
 \end{enumerate}
