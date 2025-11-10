@@ -1,5 +1,9 @@
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 %From \eqref{eq:dice_xiz}, 
+\item The mean of the Bernoulli distribution is 
+\begin{align}
+	E\brak{X} = p
+\end{align}
 \item Let 
 $X_i$ be independent.  For 
 \begin{align}
@@ -13,23 +17,27 @@ M_X(z)&=\prod_{i=1}^{n}M_{X_i}(z)
 \label{eq:mgf-mean}
 E\sbrak{X^n}&= \frac{d^nM_{X}(z^{-1})}{dz^n}\vert_{z=1}
 \end{align}
-\item {\em The $Z$-transform: }
-	\iffalse
-The $Z$-transform of $p_X(n)$ is defined as 
-%\cite{proakis_dsp}
+\item The mean for the Binomial r.v. is
 \begin{align}
-P_X(z) = \sum_{n = -\infty}^{\infty}p_X(n)z^{-n}, \quad z \in \mathbb{C}
-\label{eq:dice_xz}
+\label{eq:mean-binom}
+E\sbrak{X}= np
 \end{align}
-%
-From \eqref{eq:dice_pmf_xi} and \eqref{eq:dice_xz}, 
+\solution
+From 
+\eqref{eq:mgf-mean}
+and 
+\eqref{eq:mgf-binom},
 \begin{align}
-P_{X_1}(z) =P_{X_2}(z) &= \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
+E\sbrak{X} 
+&= \frac{d(q + pz)^n}{dz}\vert_{z=1}
 \\
-&=\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}, \quad \abs{z} > 1
-\label{eq:dice_xiz}
+&=np(q + pz)^{n-1}|_{z=1}
+\\
+&= np(q + p)^{n-1}
 \end{align}
-upon summing up the geometric progression.  
-\fi
-%\cite{proakis_dsp}. 
+yielding
+\eqref{eq:mean-binom}
+\begin{align}
+\because p+q=1
+\end{align}
 \end{enumerate}

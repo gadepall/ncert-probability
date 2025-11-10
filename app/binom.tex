@@ -1,37 +1,28 @@
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \item The Binomial distribution is defined as 
 \begin{align}
+\label{eq:binom-ber}
 X &= X_1+X_2+...+X_n,
 \end{align}
 Where $X_i$ are i.i.d bernoulli.
-\item For a Binomial random variable $X$ with parameters $n,p$,
+\item For $X_i\sim \text{Ber}\brak{p}$,
+\begin{align}
+\label{eq:mgf-ber}
+M_{X_i}(z)= q+pz^{-1}, \quad q = 1-p
+\end{align}
+upon substituting from 
+\eqref{eq:ber-pmf}
+in
+\eqref{eq:dice_xz}.
+\item For $X\sim \text{Binom}\brak{n,p}$,
 \begin{align}
 \label{eq:mgf-binom}
 M_X(z)= \brak{q+pz^{-1}}^n
 \end{align}
-\item The mean for the Binomial r.v. is
-\begin{align}
-\label{eq:mean-binom}
-E\sbrak{X}= np
-\end{align}
-\solution
-From 
-\eqref{eq:mgf-mean}
-and 
-\eqref{eq:mgf-binom},
-\begin{align}
-E\sbrak{X} 
-&= \frac{d(q + pz)^n}{dz}\vert_{z=1}
-\\
-&=np(q + pz)^{n-1}|_{z=1}
-\\
-&= np(q + p)^{n-1}
-\end{align}
-yielding
-\eqref{eq:mean-binom}
-\begin{align}
-\because p+q=1
-\end{align}
+using
+\eqref{eq:binom-ber}
+and
+\eqref{eq:dice_xzprod_def}.
 \item In a hurdle race, a player has to cross 10 hurdles. The probability that he will
 clear each hurdle is $\frac{5}{6}$. What is the probability that he will knock down fewer than 2 hurdles?
 \solution See the following code
