@@ -26,12 +26,12 @@ and
 \item Expanding
 \eqref{eq:mgf-binom},
 \begin{align}
-	M_X(z)&= \sum_{k=0}^{n}\brak{1-p}^{n-k}p^kz^{-k}
+	M_X(z)&= \sum_{k=0}^{n}\comb{n}{k}\brak{1-p}^{n-k}p^kz^{-k}
 	\\
 	\implies p_X(k)
 	      &=
 	\begin{cases}
-	\brak{1-p}^{n-k}p^k & 0 \le k \le n
+	\comb{n}{k}\brak{1-p}^{n-k}p^k & 0 \le k \le n
 	\\
 	0 & \text{otherwise}
 	\end{cases}
