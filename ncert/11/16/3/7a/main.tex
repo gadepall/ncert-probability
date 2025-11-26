@@ -1,0 +1,54 @@
+If $X \sim \bnm{4}{\frac{1}{2}}$ denotes a head, the amount of money the person will have after $n$ tosses is
+\begin{align}
+ %&= (X \times 1)-(Y \times 1.5)\\
+ A&= (X \times 1)-((n-X) \times 1.5)\\
+ &= 2.5X-1.5n
+\end{align}
+Therefore, 
+\iffalse
+For the given question the value of n = 4
+\begin{align}
+A = (2.5X)-6
+\end{align}
+The probability of getting a profit/loss is:
+\begin{align}
+p_X(k) = \comb{4}{k}(0.5)^k(0.5)^{4-k} = \comb{4}{k}(0.5)^4
+\end{align}
+Let $F_X(k)$ denote the cumulative distribution function of X:
+\begin{align}
+F_X(k) = p(X \leq k) = \sum_{i=0}^k\comb{4}{i} \brak{\frac{1}{2}}^4 \label{eq:ncert/11/16/3/7a/cumulative}
+\end{align}
+Let $F_A(k)$ denote the cumulative distribution function of A:
+\begin{align}
+F_A(k) &= p(A \leq k)\\
+&=p(2.5X-6 \leq k)\\
+&=p\brak{X \leq \frac{k+6}{2.5}}\\
+&=F_X\brak{\frac{k+6}{2.5}}\\
+\end{align}
+By \eqref{eq:ncert/11/16/3/7a/cumulative}
+\begin{align}
+&=\sum_{i=0}^{\frac{k+6}{2.5}}\comb{4}{i}\brak{\frac{1}{2}}^4
+\end{align}
+\fi
+\begin{align}
+	p_A(k) &= \pr{A = k}  
+ = \pr{2.5X-1.5n = k}
+ \\
+	       &= \pr{X = \frac{k+1.5n}{2.5}} = p_X\brak{\frac{k+6}{2.5}}
+%\begin{cases}
+%\comb{4}{\frac{k+6}{2.5}}\brak{\frac{1}{2}}^4, & \frac{k+6}{2.5} \in I \text{ and } 0 \leq \frac{k+6}{2.5} \leq 4\\
+%0, &\text{otherwise}
+%\end{cases}
+\end{align}
+%Now, for $4$ tosses as given in the question the different amount of money and its probability = $ \brak{4,\frac{1}{16}}, \brak{1.5,\frac{1}{4}}, \brak{-1,\frac{3}{8}}, \brak{-3.5,\frac{1}{4}}, \brak{-6,\frac{1}{16}}$
+See \figref{fig:binom-trans}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{ncert/11/16/3/7a/figs/figure1.png}
+\caption{PMF of $A$}
+\label{fig:binom-trans}
+\end{figure}
+
+
+
+
