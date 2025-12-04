@@ -1,0 +1,42 @@
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item Let
+\begin{align}
+	X \sim \bnm{n}{p}
+\end{align}
+The mean and variance are then given by 
+\begin{align}
+    \mu = np,\,
+    \sigma^2 = npq.
+\end{align}
+\item For large $n$, 
+\begin{align}
+	X \system*{d} Y \sim \gauss{\mu}{\sigma}
+\end{align}
+which implies that $X$ converges in distribution to the Gaussian.  The Gaussian distribution has the probability density function (PDF)
+\begin{align}
+	p_Y(x) = \frac{1}{\sqrt{2\pi} \sigma}e^{-\frac{\brak{x-\mu}^2}{2\sigma^2}}.
+\end{align}
+\solution See
+Appendix \ref{app:clt-binom}.
+A comparison of Binomial and Gaussian pmf/pdf is provided in 
+	Figs. 
+  \ref{fig:ncert/12/13/6/4/1}
+  and
+  \ref{fig:ncert/12/13/6/4/2}.
+\begin{figure}[H]
+	\centering
+%\begin{subfigure}{0.4\textwidth}
+  \includegraphics[width=\columnwidth]{ncert/12/13/6/4/figs/10.eps}
+  \caption{10 trials}
+  \label{fig:ncert/12/13/6/4/1}
+\end{figure}
+%\end{subfigure}
+%\begin{subfigure}{0.4\textwidth}
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=\columnwidth]{ncert/12/13/6/4/figs/1000.eps}
+  \caption{1000 trials}
+  \label{fig:ncert/12/13/6/4/2}
+%\end{subfigure}
+\end{figure}
+\end{enumerate}

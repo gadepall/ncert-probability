@@ -104,21 +104,43 @@ columns=fullflexible
     {\begin{array}{@{}*{#1}{c}@{}}}
     {\begin{array}{@{}*{#1}{c}|*{#2}{c}@{}}}%
 }
-\NewDocumentCommand{\system}{gg}{%
-  \IfNoValueTF{#1}
+%\NewDocumentCommand{\system}{gg}{%
+%  \IfNoValueTF{#1}
+%    {%
+% \longleftrightarrow
+%    }
+%    {%
+%      \IfNoValueTF{#2}
+%      {%
+%\overset{\mathcal{#1}}{ \longleftrightarrow}
+%      }
+%      {%
+%\overset{\mathcal{#1}^{#2}}{ \longleftrightarrow}
+%      }
+%    }%
+%}
+%\usepackage{xparse}
+
+\NewDocumentCommand{\system}{s g g}{%
+  \IfNoValueTF{#2}
     {%
- \longleftrightarrow
+      \longleftrightarrow
     }
     {%
-      \IfNoValueTF{#2}
-      {%
-\overset{\mathcal{#1}}{ \longleftrightarrow}
-      }
-      {%
-\overset{\mathcal{#1}^{#2}}{ \longleftrightarrow}
-      }
+      \IfNoValueTF{#3}
+        {%
+          \IfBooleanTF{#1}
+            {\overset{#2}{\longleftrightarrow}}           % ⭐ star → NO mathcal
+            {\overset{\mathcal{#2}}{\longleftrightarrow}} % normal → WITH mathcal
+        }
+        {%
+          \IfBooleanTF{#1}
+            {\overset{#2^{#3}}{\longleftrightarrow}}           
+            {\overset{\mathcal{#2}^{#3}}{\longleftrightarrow}}
+        }
     }%
 }
+
 
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
