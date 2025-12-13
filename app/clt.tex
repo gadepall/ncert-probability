@@ -1,4 +1,8 @@
 \begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item The pdf of a Gaussian rv with mean $\mu$ and variance $\sigma^2$, defined as $Y \sim \gauss{\mu}{\sigma^2}$ is given by
+	\begin{align}
+	p_Y(x) = \frac{1}{\sqrt{2\pi} \sigma}e^{-\frac{\brak{x-\mu}^2}{2\sigma^2}}\quad x \in \brak{-\infty, \infty}.
+\end{align}
 \item Let
 \begin{align}
 	X \sim \bnm{n}{p}
@@ -10,15 +14,17 @@ The mean and variance are then given by
 \end{align}
 \item For large $n$, 
 \begin{align}
-	X \system*{d} Y \sim \gauss{\mu}{\sigma}
+	Z = \frac{X-\mu}{\sigma} \system*{d}  \gauss{0}{1}
 \end{align}
-which implies that $X$ converges in distribution to the Gaussian.  The Gaussian distribution has the probability density function (PDF)
-\begin{align}
-	p_Y(x) = \frac{1}{\sqrt{2\pi} \sigma}e^{-\frac{\brak{x-\mu}^2}{2\sigma^2}}.
-\end{align}
+which implies that $Z$ converges in distribution to the standard Gaussian.  
+%The standard Gaussian distribution has the probability density function (PDF)
+%\begin{align}
+%	p_Z(x) = \frac{1}{\sqrt{2\pi} \sigma}e^{-\frac{x^2}{2}} \quad x \in \brak{-\infty, \infty}.
+%\end{align}
+\\
 \solution See
 Appendix \ref{app:clt-binom}.
-A comparison of Binomial and Gaussian pmf/pdf is provided in 
+A comparison of the Binomial and Gaussian pmf/pdf is provided in 
 	Figs. 
   \ref{fig:ncert/12/13/6/4/1}
   and
@@ -39,4 +45,33 @@ A comparison of Binomial and Gaussian pmf/pdf is provided in
   \label{fig:ncert/12/13/6/4/2}
 %\end{subfigure}
 \end{figure}
+\item The CDF of $Z$ is
+\begin{align}
+F_{Z}\brak{x} &= \pr{Z \leq x}\\
+&= \Phi_{Z}\brak{x}
+\end{align}
+\item The $Q$-function is defined as
+\begin{align}
+  \begin{aligned}
+    \qfunc{x} &= \pr{Z > x}, \quad & x &> 0, \\
+    \qfunc{-x} &= \pr{Z > -x}, \quad & x &< 0, \\
+              &= 1 - \qfunc{x}. &
+  \end{aligned}
+\end{align}
+\item 
+\begin{align}
+  \Phi_Z(x) =
+	\begin{cases}
+ 1 - \qfunc{x}, &  x > 0, \\
+ \qfunc{-x}, &  x < 0.
+\end{cases}
+\end{align}
+%
+\item 
+\begin{align}
+\Phi_{Y}\brak{x} &= \begin{cases}
+                 1 - \qfunc{\frac{x - \mu}{\sigma}},&  x > \mu\\
+  \qfunc{\frac{\mu - x}{\sigma}},& x < \mu
+               \end{cases}
+\end{align}
 \end{enumerate}
