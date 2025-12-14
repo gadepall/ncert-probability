@@ -9,6 +9,7 @@
 \end{align}
 The mean and variance are then given by 
 \begin{align}
+	\label{clt:bin-mu-sigma}
     \mu = np,\,
     \sigma^2 = npq.
 \end{align}
@@ -69,7 +70,8 @@ F_{Z}\brak{x} &= \pr{Z \leq x}\\
 %
 \item 
 \begin{align}
-\Phi_{Y}\brak{x} &= \begin{cases}
+\label{clt:gauss-cdf-mu-sigma}
+F_{Y}\brak{x} &= \begin{cases}
                  1 - \qfunc{\frac{x - \mu}{\sigma}},&  x > \mu\\
   \qfunc{\frac{\mu - x}{\sigma}},& x < \mu
                \end{cases}

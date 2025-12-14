@@ -1,19 +1,15 @@
-From the given information, $X \sim \bnm{10}{\frac{9}{10}}$.
-Let,
+From the given information, $X \sim \bnm{10}{\frac{9}{10}}$.  
+	From \eqref{clt:bin-mu-sigma},
 \begin{align}
-	\pr{X \le 6} \approx \Phi_Y\brak{6} &= \qfunc{\frac{6-9}{}}
+\mu &= 10 \times \frac{9}{10} = 9,
 	\\
-    Z&=\frac{X-\mu}{\sigma},\, \mu = np,\, \sigma^2 = npq
+	\sigma^2 &= 10 \times \frac{9}{10}\times \frac{1}{10} = \frac{9}{10}  
 \end{align}
-since
+The desired probability is
 \begin{align}
-	\mu = np = 9, \sigma^2 = 0.9
-\end{align}
-For large $n$, 
-\begin{align}
-	Z &\sim \gauss{0}{1}
+	\pr{X \le 6} \approx F_Y\brak{6} &= \qfunc{\frac{9-6}{3}\sqrt{10}}
 	\\
-	\implies
-\pr{Z<-2.63} &= \pr{-Z>2.63} \equiv \pr{Z>-2.63}
-= Q(2.63)
+    &=\qfunc{\sqrt{10}}
 \end{align}
+from 
+\eqref{clt:gauss-cdf-mu-sigma}.
