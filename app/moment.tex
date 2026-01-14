@@ -1,4 +1,4 @@
-\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
 	\item The mean of an rv is defined as
 		\begin{align}
 			\label{moment:def}
@@ -7,16 +7,41 @@
 	\item The variance of an rv is defined as
 		\begin{align}
 			\sigma^2= E\brak{X-\mu}^2 = \sum_k \brak{k-\mu}^2p_X(k)
+			\label{var:def}
 		\end{align}
 			
 	\item In general, the $n$th moment is defined as
 		\begin{align}
 			 E\brak{X}^n = \sum_k k^np_X(k)
+			\label{moment:def-gen}
 		\end{align}
 	\item 
 		\begin{align}
 			 E\brak{X}^2 = \sigma^2 + \mu^2
+			\label{var:moment}
 		\end{align}
+		\solution
+			\eqref{var:def}
+			can be expressed as
+\begin{align}
+E\sbrak{X-E\brak{X}}^2
+&=E\sbrak{X^2+\sbrak{E\brak{X}}^2-2XE\brak{X}}\\
+&=E\brak{X^2}+\sbrak{E\brak{X}}^2-2\sbrak{E\brak{X}}^2\\
+&=E\brak{X^2}-\sbrak{E\brak{X}}^2
+\end{align} 
+yielding
+			\eqref{var:moment}.
+		\item 
+			\begin{align}
+				\text{var}(aX) = a^2 \text{var}\brak{X}.
+			\label{var:homo-l}
+			\end{align}
+			\solution
+\begin{align}
+	\text{var}\brak{{aX}}&=E\brak{{a^2X^2}}-\sbrak{E\brak{{aX}}}^2\\
+&=a^2\sbrak{E\brak{X^2}-\sbrak{E\brak{X}}^2}\\
+&=a^2{\text{var}\brak{X}}{4}
+\end{align}
 	\item For $X \sim \bnm{n}{p}$,
 		\begin{align}
 			\label{moment-mean-var}
